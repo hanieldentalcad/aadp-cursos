@@ -103,9 +103,9 @@ nav .btn i{width:30px;height:30px}
 
 /* ===== hero ===== */
 .hero{padding-block:128px 56px}
-.hero-g{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero-g{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
 .hero-g>*,.ato>*,.mani>*,.founder>*,.autor>*,.final>*,.plans>*,.below>*,.buy>*{min-width:0}
-.hero h1{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.98;letter-spacing:.005em;margin:16px 0 14px}
+.hero h1{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(2.4rem,4.3vw,4.6rem);line-height:.98;letter-spacing:.005em;margin:16px 0 14px}
 .hero h1 span{display:block;background:linear-gradient(100deg,var(--ice) 0%,#cfe2f2 25%,var(--ice) 45%,var(--gold-hi) 70%,var(--ice) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s linear infinite}
 @keyframes shimmer{to{background-position:-250% 0}}
 .hero .ital{font-size:clamp(1.25rem,2vw,1.55rem)}
@@ -258,8 +258,74 @@ footer a:hover{color:var(--gold-hi)}
 @keyframes up{from{opacity:0;transform:translateY(18px)}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
+/* ===== barra de progresso ===== */
+.prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:40;background:linear-gradient(90deg,var(--navy-hi),var(--ice),var(--gold-hi));transform-origin:left;transform:scaleX(0)}
+
+/* ===== capas em leque no topo ===== */
+.fan{position:relative;height:540px;perspective:1400px}
+.fan .card{position:absolute;width:44%;text-decoration:none;animation:bob 7s ease-in-out infinite;transition:z-index 0s}
+.fan .card .frame{padding:7px;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.fan .card img{aspect-ratio:2/3;width:100%;object-fit:cover;border-radius:3px}
+.fan .card:hover{z-index:5}
+.fan .card:hover .frame{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(143,182,216,.18)}
+.fan .c1{left:6%;top:7%;transform:rotate(-6deg);z-index:2}
+.fan .c2{right:6%;top:0;transform:rotate(5deg);z-index:3;animation-delay:-3.5s}
+.fan .c3{left:30%;top:16%;width:40%;transform:rotate(-1deg);z-index:1;animation-delay:-1.8s;opacity:.92}
+.fan .c3 .frame{aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px;background:linear-gradient(170deg,rgba(143,182,216,.10),rgba(11,12,15,.6))}
+.fan .c3 b{font-family:var(--f-text);font-weight:400;color:var(--ivory);font-size:1.05rem;line-height:1.3}
+.fan .c3 small{font-family:var(--f-label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice)}
+.fan .cap{display:flex;justify-content:space-between;margin-top:10px;font-family:var(--f-label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
+@keyframes bob{50%{translate:0 -10px}}
+
+/* ===== selos de confiança ===== */
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-family:var(--f-label);font-size:.74rem;letter-spacing:.08em;color:var(--txt)}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 10px var(--gold-hi)}
+
+/* ===== faixa de temas ===== */
+.marq{overflow:hidden;border-block:1px solid var(--line);background:rgba(255,255,255,.015);padding-block:16px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq .track{display:flex;width:max-content;animation:marq 60s linear infinite}
+.marq span{font-family:var(--f-label);font-weight:500;font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);padding-inline:22px;white-space:nowrap}
+.marq span:nth-child(3n+1){color:var(--gold-hi)}
+.marq i{font-style:normal;color:var(--gold);opacity:.6}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ===== depoimentos ===== */
+.deps{display:grid;gap:14px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.deps .row{display:flex;gap:14px;width:max-content;animation:marq 70s linear infinite}
+.deps .row.b{animation-direction:reverse;animation-duration:80s}
+.deps:hover .row{animation-play-state:paused}
+.q{width:380px;flex:none;padding:22px 24px;border-radius:6px;display:flex;flex-direction:column;gap:14px}
+.q p{font-family:var(--f-elegant);font-size:1.12rem;line-height:1.5;color:var(--ivory)}
+.q p:before{content:"“";color:var(--gold);font-size:1.6rem;line-height:0;vertical-align:-.35em;margin-right:4px}
+.q span{margin-top:auto;font-family:var(--f-label);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.dep-note{margin-top:14px;text-align:center;color:var(--muted);font-size:.85rem}
+
+/* ===== comparativo ===== */
+.cmp-wrap{margin-top:14px;border-radius:8px;overflow-x:auto}
+.cmp{width:100%;min-width:760px;border-collapse:collapse;font-size:.95rem}
+.cmp caption{text-align:left;padding:22px 24px 6px;color:var(--ivory)}
+.cmp th,.cmp td{padding:13px 16px;border-bottom:1px solid var(--line);text-align:center}
+.cmp th:first-child,.cmp td:first-child{text-align:left;padding-left:24px}
+.cmp thead th{font-family:var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.cmp thead th.hl{color:var(--ice)}
+.cmp td.hl{background:rgba(42,78,146,.14)}
+.cmp td.y{color:var(--gold-hi);font-family:var(--f-label)}
+.cmp td.n{color:rgba(142,136,122,.45)}
+.cmp tfoot td{font-family:var(--f-text);color:var(--ivory);border-bottom:0;padding-block:16px}
+
+/* ===== barra de compra fixa (celular) ===== */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:35;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gutr) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(11,12,15,.78);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.sticky.on{transform:none}
+.sticky b{display:block;font-family:var(--f-text);font-weight:400;color:var(--ivory);font-size:.98rem;line-height:1.2}
+.sticky small{font-family:var(--f-label);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sticky .btn{padding:5px 5px 5px 16px;font-size:.68rem}
+.sticky .btn i{width:30px;height:30px}
+
 @media (max-width:1080px){
  .links{display:none}
+ .sticky{display:flex}
+ .fan{height:auto;aspect-ratio:1/0.95;max-width:560px;margin-inline:auto;width:100%}
  .hero-g{grid-template-columns:1fr}
  .tiles{grid-template-columns:repeat(2,1fr)}
  .mani{grid-template-columns:1fr;gap:18px;padding:32px 28px}
@@ -295,6 +361,18 @@ footer a:hover{color:var(--gold-hi)}
  nav .btn span{display:none}
  nav .btn{padding:5px}
  .gar,.extra{flex-direction:column;align-items:flex-start}
+ .q{width:290px;padding:18px}
+ .q p{font-size:1rem}
+ .trust{gap:8px 16px}
+ footer{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+ .deps .row{flex-wrap:wrap;width:auto}
+ .deps .row [aria-hidden]{display:none}
+ .marq .track{flex-wrap:wrap;width:auto;justify-content:center}
+ .marq .track>[aria-hidden]{display:none}
+ .deps{mask-image:none}
+ .deps .row{justify-content:center;margin-inline:auto;max-width:1380px;padding-inline:var(--gut)}
 }
 </style>
 </head>
@@ -302,6 +380,7 @@ footer a:hover{color:var(--gold-hi)}
 
 <div class="fx" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="grid"></div><div id="sils"></div></div>
 <div class="spot" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
 
 <nav id="nav"><div class="w">
  <a class="brand" href="#topo" aria-label="Haniel Dental CAD Works"><b>HANIEL</b><span>DENTAL CAD WORKS</span></a>
@@ -321,8 +400,12 @@ footer a:hover{color:var(--gold-hi)}
     <a class="btn b-main" href="#valores"><span>Escolher meu ato</span><i>→</i></a>
     <a class="btn b-glass" href="#ato1"><span>Ver o conteúdo</span><i>↓</i></a>
    </div>
+   <div class="trust in"><span>Acesso por 2 anos</span><span>Certificado de conclusão</span><span>Garantia de 7 dias</span><span>Até 12x no cartão</span></div>
   </div>
-  <div class="art in"><div class="frame glass tilt"><img src="imagens/aadp.jpg" alt="A Arte da Previsibilidade, de Haniel Azevedo" width="1600" height="900"></div></div>
+  <div class="fan in">
+   <a class="card c1" href="#ato1"><div class="frame glass tilt"><img src="imagens/inicios.jpg" alt="Capa do Primeiro Ato: A Arte dos Inícios" width="720" height="1080"></div><span class="cap"><span>I · Inícios</span><span>→</span></span></a>
+   <a class="card c2" href="#ato2"><div class="frame glass tilt"><img src="imagens/estruturas.jpg" alt="Capa do Segundo Ato: A Arte das Estruturas e das Formas" width="720" height="1080"></div><span class="cap"><span>II · Estruturas e Formas</span><span>→</span></span></a>
+  </div>
  </div>
  <div class="tiles">
   <a class="tile glass hov" href="#ato1"><span class="n">I</span><span class="label">Primeiro Ato</span><b>A Arte dos Inícios</b><small>Iniciante · 5 módulos · 18 aulas</small><span class="p">12x R$ 66,42<em>→</em></span></a>
@@ -332,7 +415,9 @@ footer a:hover{color:var(--gold-hi)}
  </div>
 </div></header>
 
-<section style="padding-top:24px"><div class="w">
+<div class="marq" aria-label="Temas dos cursos"><div class="track"><span>Perfil de emergência</span><span><i>✦</i></span><span>Coroas</span><span><i>✦</i></span><span>Prótese sobre implante</span><span><i>✦</i></span><span>Inlay · Onlay · Overlay</span><span><i>✦</i></span><span>Pontes</span><span><i>✦</i></span><span>Smile design</span><span><i>✦</i></span><span>Enceramento</span><span><i>✦</i></span><span>Canal manual</span><span><i>✦</i></span><span>Desoclusão</span><span><i>✦</i></span><span>Equilíbrio oclusal</span><span><i>✦</i></span><span>Articulador digital</span><span><i>✦</i></span><span>Montagem com foto</span><span><i>✦</i></span><span>Anatomia anterior e posterior</span><span><i>✦</i></span><span>Caracterização</span><span><i>✦</i></span><span>Planejamento full</span><span><i>✦</i></span><span>Protocolo digital</span><span><i>✦</i></span><span>Placa de bruxismo</span><span><i>✦</i></span><span>Tabela de valores</span><span><i>✦</i></span><span>Captação de clientes</span><span><i>✦</i></span><span aria-hidden="true" style="display:contents"><span>Perfil de emergência</span><span><i>✦</i></span><span>Coroas</span><span><i>✦</i></span><span>Prótese sobre implante</span><span><i>✦</i></span><span>Inlay · Onlay · Overlay</span><span><i>✦</i></span><span>Pontes</span><span><i>✦</i></span><span>Smile design</span><span><i>✦</i></span><span>Enceramento</span><span><i>✦</i></span><span>Canal manual</span><span><i>✦</i></span><span>Desoclusão</span><span><i>✦</i></span><span>Equilíbrio oclusal</span><span><i>✦</i></span><span>Articulador digital</span><span><i>✦</i></span><span>Montagem com foto</span><span><i>✦</i></span><span>Anatomia anterior e posterior</span><span><i>✦</i></span><span>Caracterização</span><span><i>✦</i></span><span>Planejamento full</span><span><i>✦</i></span><span>Protocolo digital</span><span><i>✦</i></span><span>Placa de bruxismo</span><span><i>✦</i></span><span>Tabela de valores</span><span><i>✦</i></span><span>Captação de clientes</span><span><i>✦</i></span></span></div></div>
+
+<section style="padding-top:56px"><div class="w">
  <div class="mani glass rv">
   <div><p class="label">O manifesto</p><h2 class="h2">Existe o cadista antes e depois da AADP</h2><p class="sig">Seja bem-vindo.</p></div>
   <blockquote>
@@ -378,6 +463,12 @@ footer a:hover{color:var(--gold-hi)}
  </div>
 </div></section>
 
+<section id="depoimentos" style="padding-top:24px"><div class="w">
+ <div class="head rv"><div><p class="label">Quem já está dentro</p><h2 class="h2">O que dizem os alunos</h2></div><p>Mensagens reais de alunos, enviadas pelo WhatsApp e pelo Instagram. Os nomes foram omitidos por privacidade.</p></div>
+</div>
+ <div class="deps rv"><div class="row"><figure class="q glass"><p>Quem pensa em subir de nível e avançar alguns anos de experiência, recomendo demais. O que ele ensinou, vejo o quanto é valioso.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Eu nunca vi nada desse jeito. A forma de explicar, as transições de tela, você explicando ali, tudo, as referências.</p><span>Aluno do Segundo Ato</span></figure><figure class="q glass"><p>Já consegui fazer uma reabilitação total com bem mais facilidade e segurança.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Estou achando as aulas incríveis e super didáticas. Como sou iniciante, está me ajudando demais!</p><span>Aluno iniciante</span></figure><figure class="q glass"><p>Bom demais, Haniel. Parabéns pelo curso INCRÍVEL. Muito didático.</p><span>Aluna AADP</span></figure><figure class="q glass"><p>Seu curso tá transformando minha forma de trabalho.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Quem pensa em subir de nível e avançar alguns anos de experiência, recomendo demais. O que ele ensinou, vejo o quanto é valioso.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Eu nunca vi nada desse jeito. A forma de explicar, as transições de tela, você explicando ali, tudo, as referências.</p><span>Aluno do Segundo Ato</span></figure><figure class="q glass" aria-hidden="true"><p>Já consegui fazer uma reabilitação total com bem mais facilidade e segurança.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Estou achando as aulas incríveis e super didáticas. Como sou iniciante, está me ajudando demais!</p><span>Aluno iniciante</span></figure><figure class="q glass" aria-hidden="true"><p>Bom demais, Haniel. Parabéns pelo curso INCRÍVEL. Muito didático.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Seu curso tá transformando minha forma de trabalho.</p><span>Aluno AADP</span></figure></div><div class="row b"><figure class="q glass"><p>Eu fiz um caso hoje da mesma forma que você fez. Ficou bem melhor do que a forma que eu fazia antes.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Já assisti ao curso todo, mas cada vez que assisto, aprendo algo novo. Ele abre um leque enorme na minha mente.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>É um nível de raciocínio acima da média. Me orgulho de ter achado teu curso. Sei que vou conseguir evoluir bem mais.</p><span>Aluna AADP</span></figure><figure class="q glass"><p>Te digo: é outro nível seu curso.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Sua forma de explicar e o tanto que tá completo… Obrigado por dividir seu conhecimento.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Impressionante, é outro nível… sem palavras.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Eu fiz um caso hoje da mesma forma que você fez. Ficou bem melhor do que a forma que eu fazia antes.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Já assisti ao curso todo, mas cada vez que assisto, aprendo algo novo. Ele abre um leque enorme na minha mente.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>É um nível de raciocínio acima da média. Me orgulho de ter achado teu curso. Sei que vou conseguir evoluir bem mais.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Te digo: é outro nível seu curso.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Sua forma de explicar e o tanto que tá completo… Obrigado por dividir seu conhecimento.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Impressionante, é outro nível… sem palavras.</p><span>Aluna AADP</span></figure></div></div>
+</section>
+
 <section id="valores"><div class="w">
  <div class="head rv"><div><p class="label">Valores</p><h2 class="h2">Escolha o seu ato</h2></div><p>Acesso pela área de membros da Hotmart, no computador ou no celular. Gravado em Roma, Florença e St. Moritz.</p></div>
  <div class="plans">
@@ -404,6 +495,27 @@ footer a:hover{color:var(--gold-hi)}
   </div>
  </article>
 
+
+ <div class="cmp-wrap glass rv">
+  <table class="cmp">
+   <caption class="label">Compare e escolha</caption>
+   <thead><tr><th scope="col">O que você recebe</th><th scope="col">Primeiro Ato</th><th scope="col">Segundo Ato</th><th scope="col" class="hl">Combo</th><th scope="col">Membro Fundador</th></tr></thead>
+   <tbody>
+    <tr><td>Fundamentos, coroas, pontes e prótese sobre implante</td><td class="y">✓</td><td class="n">—</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Planejamento digital, smile design e enceramento de 6 elementos</td><td class="y">✓</td><td class="n">—</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Planejamento superior, inferior e full, com e sem foto</td><td class="n">—</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Desoclusão, articulador e formas anteriores e posteriores</td><td class="n">—</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Protocolos digitais e placas de bruxismo</td><td class="n">—</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Captar clientes, Instagram e tabela de valores</td><td class="n">—</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>Live bônus “Oclusão para cadistas” (2h40)</td><td class="n">—</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+    <tr><td>5 bibliotecas exocad, incluindo a AADP Founder Library</td><td class="n">—</td><td class="n">—</td><td class="n hl">—</td><td class="y">✓</td></tr>
+    <tr><td>Grupo VIP e suporte exclusivo com o criador</td><td class="n">—</td><td class="n">—</td><td class="n hl">—</td><td class="y">✓</td></tr>
+    <tr><td>12 meses de cortesia do Gestão de CAD</td><td class="n">—</td><td class="n">—</td><td class="n hl">—</td><td class="y">✓</td></tr>
+    <tr><td>Certificado e acesso por 2 anos</td><td class="y">✓</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
+   </tbody>
+   <tfoot><tr><td>Investimento</td><td>R$ 797</td><td>R$ 1.197</td><td class="hl">R$ 1.797</td><td>R$ 1.497 no Pix</td></tr></tfoot>
+  </table>
+ </div>
  <div class="below">
   <div class="gar glass rv"><div class="seal"><div><b>7</b><small>DIAS</small></div></div><p><b style="color:var(--ivory);font-weight:400">Garantia de 7 dias.</b> Entre, assista e sinta o método. Se não for para você, peça o reembolso pela própria Hotmart dentro de 7 dias e recebe 100% do valor de volta.</p></div>
   <div class="extra glass rv"><span>Aula avulsa: <b>O Cadista e a Oclusão</b></span><a data-checkout="oclusao" href="#">Conhecer a aula →</a></div>
@@ -434,6 +546,8 @@ footer a:hover{color:var(--gold-hi)}
   <details class="glass rv"><summary>Nunca usei o exocad. Posso começar?</summary><p>Sim. O Primeiro Ato foi pensado para iniciantes e intermediários no CAD, e até para quem nunca teve experiência com o CAD odontológico.</p></details>
   <details class="glass rv"><summary>Em que ordem devo fazer os cursos?</summary><p>O ideal é seguir a ordem dos atos: primeiro A Arte dos Inícios, depois A Arte das Estruturas e das Formas. Se você já tem experiência sólida no exocad, pode ir direto ao Segundo Ato.</p></details>
   <details class="glass rv"><summary>Como eu assisto às aulas?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso à área de membros da Hotmart e assiste no computador, no tablet ou no celular.</p></details>
+  <details class="glass rv"><summary>Por quanto tempo tenho acesso?</summary><p>Você tem 2 anos de acesso a todas as aulas do curso que comprar, a partir da data da compra.</p></details>
+  <details class="glass rv"><summary>O curso tem certificado?</summary><p>Sim. Ao concluir o curso, você recebe o certificado de conclusão pela área de membros da Hotmart.</p></details>
   <details class="glass rv"><summary>Posso parcelar? Tem desconto no Pix?</summary><p>Na Hotmart você parcela em até 12x. Para pagar no Pix com desconto, toque em “Desconto no Pix” e fale direto pelo WhatsApp.</p></details>
   <details class="glass rv"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pela Hotmart dentro desse prazo e recebe 100% do valor de volta.</p></details>
   <details class="glass rv"><summary>Ainda tenho dúvidas. Com quem falo?</summary><p>Fale direto pelo <a id="waFaq" href="#">WhatsApp (11) 93931-8325</a>.</p></details>
@@ -452,6 +566,8 @@ footer a:hover{color:var(--gold-hi)}
   <figure><img src="imagens/florenca.jpg" alt="" width="1024" height="1536" loading="lazy"></figure>
  </div>
 </div></section>
+
+<div class="sticky" id="sticky"><div><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main" href="#valores"><span>Ver valores</span><i>→</i></a></div>
 
 <footer><div class="w">
  <div>© <span id="ano">2026</span> Haniel Dental CAD Works. Todos os direitos reservados. A Arte da Previsibilidade® é marca registrada.</div>
@@ -532,7 +648,10 @@ document.querySelectorAll("[data-mods]").forEach(function(box){
 /* ===== interações ===== */
 var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,fine=matchMedia("(pointer: fine)").matches;
 var nav=document.getElementById("nav"),root=document.documentElement,sils=document.querySelectorAll(".sil");
-function onScroll(){nav.classList.toggle("on",scrollY>30);if(!reduce){var y=scrollY;for(var i=0;i<sils.length;i++){sils[i].style.translate="0 "+(-y*0.04*sils[i].dataset.depth)+"px"}}}
+var prog=document.getElementById("prog"),sticky=document.getElementById("sticky"),valores=document.getElementById("valores");
+function onScroll(){nav.classList.toggle("on",scrollY>30);
+ var max=document.documentElement.scrollHeight-innerHeight;prog.style.transform="scaleX("+(max>0?scrollY/max:0)+")";
+ var v=valores.getBoundingClientRect();sticky.classList.toggle("on",scrollY>innerHeight*0.9&&!(v.top<innerHeight&&v.bottom>0));if(!reduce){var y=scrollY;for(var i=0;i<sils.length;i++){sils[i].style.translate="0 "+(-y*0.04*sils[i].dataset.depth)+"px"}}}
 onScroll();addEventListener("scroll",onScroll,{passive:true});
 if(fine&&!reduce){
  addEventListener("pointermove",function(e){root.style.setProperty("--mx",e.clientX+"px");root.style.setProperty("--my",e.clientY+"px")},{passive:true});
