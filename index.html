@@ -300,6 +300,24 @@ footer a:hover{color:var(--gold-hi)}
 .q p:before{content:"“";color:var(--gold);font-size:1.6rem;line-height:0;vertical-align:-.35em;margin-right:4px}
 .q span{margin-top:auto;font-family:var(--f-label);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .dep-note{margin-top:14px;text-align:center;color:var(--muted);font-size:.85rem}
+.q footer{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.q .who b{display:block;font-family:var(--f-text);font-weight:400;font-size:.95rem;color:var(--ivory);letter-spacing:0;text-transform:none}
+.q .who a{font-family:var(--f-label);font-size:.72rem;letter-spacing:.06em;color:var(--ice);text-decoration:none}
+.q .who small{display:block;font-family:var(--f-label);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.q .ver{flex:none;font-family:var(--f-label);font-weight:600;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);background:rgba(178,161,126,.1);border:1px solid var(--line2);border-radius:999px;padding:7px 12px;cursor:pointer;transition:background .2s}
+.q .ver:hover{background:rgba(178,161,126,.22)}
+dialog.print{margin:auto;max-width:min(560px,92vw);max-height:90vh;padding:0;border:1px solid var(--line2);border-radius:8px;background:var(--bg2);color:var(--txt);overflow:auto}
+dialog.print::backdrop{background:rgba(5,6,8,.78);backdrop-filter:blur(6px)}
+dialog.print img{width:100%;height:auto}
+dialog.print .bar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:rgba(16,18,24,.92);border-bottom:1px solid var(--line);font-family:var(--f-label);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+dialog.print button{background:none;border:1px solid var(--line2);color:var(--ivory);border-radius:999px;width:32px;height:32px;cursor:pointer;font-size:1rem}
+.inside{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.inside figure{position:relative}
+.inside .im{border-radius:5px;overflow:hidden;aspect-ratio:16/9;border:1px solid var(--line)}
+.inside img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.inside figure:hover img{transform:scale(1.06)}
+.inside figure:hover .im{border-color:var(--line2)}
+.inside figcaption{padding-top:8px;font-family:var(--f-label);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 
 /* ===== comparativo ===== */
 .cmp-wrap{margin-top:14px;border-radius:8px;overflow-x:auto}
@@ -325,6 +343,7 @@ footer a:hover{color:var(--gold-hi)}
 @media (max-width:1080px){
  .links{display:none}
  .sticky{display:flex}
+ .inside{grid-template-columns:repeat(2,1fr)}
  .fan{height:auto;aspect-ratio:1/0.95;max-width:560px;margin-inline:auto;width:100%}
  .hero-g{grid-template-columns:1fr}
  .tiles{grid-template-columns:repeat(2,1fr)}
@@ -463,10 +482,15 @@ footer a:hover{color:var(--gold-hi)}
  </div>
 </div></section>
 
-<section id="depoimentos" style="padding-top:24px"><div class="w">
- <div class="head rv"><div><p class="label">Quem já está dentro</p><h2 class="h2">O que dizem os alunos</h2></div><p>Mensagens reais de alunos, enviadas pelo WhatsApp e pelo Instagram. Os nomes foram omitidos por privacidade.</p></div>
+<section id="por-dentro" style="padding-top:8px"><div class="w">
+ <div class="head rv"><div><p class="label">Por dentro do curso</p><h2 class="h2">Cada módulo, uma obra</h2></div><p>As capas dos módulos do Segundo Ato, do jeito que aparecem na área de membros.</p></div>
+ <div class="inside"><figure class="rv"><div class="im"><img src="imagens/modulos/m1.jpg" alt="Capa do módulo 01: A arte das estruturas" width="800" height="450" loading="lazy"></div><figcaption>Módulo 01</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m2.jpg" alt="Capa do módulo 02: A arte de diagnosticar" width="800" height="450" loading="lazy"></div><figcaption>Módulo 02</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m3.jpg" alt="Capa do módulo 03: A arte de articular" width="800" height="450" loading="lazy"></div><figcaption>Módulo 03</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m4.jpg" alt="Capa do módulo 04: A arte das formas" width="800" height="450" loading="lazy"></div><figcaption>Módulo 04</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m5.jpg" alt="Capa do módulo 05: A arte de planejar" width="800" height="450" loading="lazy"></div><figcaption>Módulo 05</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m6.jpg" alt="Capa do módulo 06: A arte dos protocolos digitais" width="800" height="450" loading="lazy"></div><figcaption>Módulo 06</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m7.jpg" alt="Capa do módulo 07: A arte das placas" width="800" height="450" loading="lazy"></div><figcaption>Módulo 07</figcaption></figure><figure class="rv"><div class="im"><img src="imagens/modulos/m8.jpg" alt="Capa do módulo 08: Se honra, honra." width="800" height="450" loading="lazy"></div><figcaption>Módulo 08</figcaption></figure></div>
+</div></section>
+
+<section id="depoimentos"><div class="w">
+ <div class="head rv"><div><p class="label">Quem já está dentro</p><h2 class="h2">O que dizem os alunos</h2></div><p>Mensagens reais que os alunos mandaram pelo WhatsApp e pelo Instagram.</p></div>
 </div>
- <div class="deps rv"><div class="row"><figure class="q glass"><p>Quem pensa em subir de nível e avançar alguns anos de experiência, recomendo demais. O que ele ensinou, vejo o quanto é valioso.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Eu nunca vi nada desse jeito. A forma de explicar, as transições de tela, você explicando ali, tudo, as referências.</p><span>Aluno do Segundo Ato</span></figure><figure class="q glass"><p>Já consegui fazer uma reabilitação total com bem mais facilidade e segurança.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Estou achando as aulas incríveis e super didáticas. Como sou iniciante, está me ajudando demais!</p><span>Aluno iniciante</span></figure><figure class="q glass"><p>Bom demais, Haniel. Parabéns pelo curso INCRÍVEL. Muito didático.</p><span>Aluna AADP</span></figure><figure class="q glass"><p>Seu curso tá transformando minha forma de trabalho.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Quem pensa em subir de nível e avançar alguns anos de experiência, recomendo demais. O que ele ensinou, vejo o quanto é valioso.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Eu nunca vi nada desse jeito. A forma de explicar, as transições de tela, você explicando ali, tudo, as referências.</p><span>Aluno do Segundo Ato</span></figure><figure class="q glass" aria-hidden="true"><p>Já consegui fazer uma reabilitação total com bem mais facilidade e segurança.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Estou achando as aulas incríveis e super didáticas. Como sou iniciante, está me ajudando demais!</p><span>Aluno iniciante</span></figure><figure class="q glass" aria-hidden="true"><p>Bom demais, Haniel. Parabéns pelo curso INCRÍVEL. Muito didático.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Seu curso tá transformando minha forma de trabalho.</p><span>Aluno AADP</span></figure></div><div class="row b"><figure class="q glass"><p>Eu fiz um caso hoje da mesma forma que você fez. Ficou bem melhor do que a forma que eu fazia antes.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Já assisti ao curso todo, mas cada vez que assisto, aprendo algo novo. Ele abre um leque enorme na minha mente.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>É um nível de raciocínio acima da média. Me orgulho de ter achado teu curso. Sei que vou conseguir evoluir bem mais.</p><span>Aluna AADP</span></figure><figure class="q glass"><p>Te digo: é outro nível seu curso.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Sua forma de explicar e o tanto que tá completo… Obrigado por dividir seu conhecimento.</p><span>Aluno AADP</span></figure><figure class="q glass"><p>Impressionante, é outro nível… sem palavras.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Eu fiz um caso hoje da mesma forma que você fez. Ficou bem melhor do que a forma que eu fazia antes.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Já assisti ao curso todo, mas cada vez que assisto, aprendo algo novo. Ele abre um leque enorme na minha mente.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>É um nível de raciocínio acima da média. Me orgulho de ter achado teu curso. Sei que vou conseguir evoluir bem mais.</p><span>Aluna AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Te digo: é outro nível seu curso.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Sua forma de explicar e o tanto que tá completo… Obrigado por dividir seu conhecimento.</p><span>Aluno AADP</span></figure><figure class="q glass" aria-hidden="true"><p>Impressionante, é outro nível… sem palavras.</p><span>Aluna AADP</span></figure></div></div>
+ <div class="deps rv" id="deps"></div>
 </section>
 
 <section id="valores"><div class="w">
@@ -518,7 +542,7 @@ footer a:hover{color:var(--gold-hi)}
  </div>
  <div class="below">
   <div class="gar glass rv"><div class="seal"><div><b>7</b><small>DIAS</small></div></div><p><b style="color:var(--ivory);font-weight:400">Garantia de 7 dias.</b> Entre, assista e sinta o método. Se não for para você, peça o reembolso pela própria Hotmart dentro de 7 dias e recebe 100% do valor de volta.</p></div>
-  <div class="extra glass rv"><span>Aula avulsa: <b>O Cadista e a Oclusão</b></span><a data-checkout="oclusao" href="#">Conhecer a aula →</a></div>
+  <div class="extra glass rv"><span>Aula avulsa: <b>O Cadista e a Oclusão</b>, oclusão em caso complexo · <b>R$ 50</b></span><a data-checkout="oclusao" href="#">Comprar a aula →</a></div>
  </div>
 </div></section>
 
@@ -580,7 +604,7 @@ var CHECKOUT={
  ato1:"https://pay.hotmart.com/F100570235L?off=25sievg4",
  ato2:"https://pay.hotmart.com/I100598190O?off=jw4fck5c",
  combo:"https://pay.hotmart.com/L100734608H?off=e19vq7md",
- oclusao:"" /* O Cadista e a Oclusão: vazio = WhatsApp */
+ oclusao:"https://pay.hotmart.com/G104244373A?off=qmlyotz3" /* O Cadista e a Oclusão, R$ 50 */
 };
 var WA="https://wa.me/5511939318325?text=";
 function wa(t){return WA+encodeURIComponent(t)}
@@ -590,6 +614,30 @@ document.querySelectorAll("[data-pix]").forEach(function(a){a.href=wa("Olá, Han
 var fb=document.getElementById("founderBtn");fb.href=wa("Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).");fb.target="_blank";fb.rel="noopener";
 var wf=document.getElementById("waFaq");wf.href=wa("Olá, Haniel! Tenho uma dúvida sobre os cursos A Arte da Previsibilidade.");wf.target="_blank";wf.rel="noopener";
 document.getElementById("ano").textContent=new Date().getFullYear();
+
+
+/* ===== depoimentos (nome e @ do Instagram: preencher quando houver) ===== */
+var DEPS=[
+ {q:"Quem pensa em subir de nível e avançar alguns anos de experiência, recomendo demais o curso do Haniel. O que ele ensinou, vejo o quanto é valioso!",nome:"",ig:"",via:"Aluno · grupo de alunos no WhatsApp"},
+ {q:"Eu nunca vi nada desse jeito. A forma de explicar, as transições de tela, você explicando ali, tudo, as referências.",nome:"",ig:"",via:"Aluno do Segundo Ato · WhatsApp"},
+ {q:"Sua forma de explicar e o tanto que tá completo… Já consegui fazer uma reabilitação total com bem mais facilidade e segurança.",nome:"",ig:"",via:"Aluno · WhatsApp"},
+ {q:"Estou achando as aulas incríveis e super didáticas. Como sou iniciante, está me ajudando demais!",nome:"",ig:"",via:"Aluno iniciante · WhatsApp"},
+ {q:"Bom demais, Haniel. Parabéns pelo curso INCRÍVEL. Muito didático.",nome:"",ig:"",via:"Aluna · Instagram"},
+ {q:"Tô evoluindo muito com o curso. Seu curso tá transformando minha forma de trabalho.",nome:"",ig:"",via:"Aluno · WhatsApp"},
+ {q:"Eu fiz um caso hoje da mesma forma que você fez. Ficou bem melhor do que a forma que eu fazia antes.",nome:"",ig:"",via:"Aluno · Instagram"},
+ {q:"Já assisti ao curso todo, mas cada vez que assisto, aprendo algo novo. Ele abre um leque enorme na minha mente.",nome:"",ig:"",via:"Aluno · WhatsApp"},
+ {q:"Você é o mestre, é um nível de raciocínio acima da média. Me orgulho de ter achado teu curso.",nome:"",ig:"",via:"Aluna · Instagram"},
+ {q:"Te digo, é outro nível seu curso.",nome:"",ig:"",via:"Aluno · WhatsApp"},
+ {q:"Impressionante, é outro nível… sem palavras.",nome:"",ig:"",via:"Aluna · Instagram"}
+];
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function depCard(d,clone){
+ var who=(d.nome?"<b>"+esc(d.nome)+"</b>":"")+(d.ig?'<a href="https://instagram.com/'+esc(d.ig.replace(/^@/,""))+'" target="_blank" rel="noopener"'+(clone?' tabindex="-1"':"")+'>@'+esc(d.ig.replace(/^@/,""))+"</a>":"")+"<small>"+esc(d.via)+"</small>";
+ return '<figure class="q glass"'+(clone?' aria-hidden="true"':"")+'><p>'+esc(d.q)+'</p><footer><span class="who">'+who+'</span></footer></figure>';
+}
+(function(){var h=Math.ceil(DEPS.length/2),rows=[DEPS.slice(0,h),DEPS.slice(h)];
+ document.getElementById("deps").innerHTML=rows.map(function(r,i){return '<div class="row'+(i?" b":"")+'">'+r.map(function(d){return depCard(d,false)}).join("")+r.map(function(d){return depCard(d,true)}).join("")+"</div>"}).join("");
+})();
 
 /* ===== módulos e aulas ===== */
 var MODS={
