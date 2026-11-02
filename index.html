@@ -258,6 +258,41 @@ footer a:hover{color:var(--gold-hi)}
 @keyframes up{from{opacity:0;transform:translateY(18px)}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
+
+/* ===== Black November (some sozinho em 1/12/2026) ===== */
+body:not(.bf) .bf-only{display:none!important}
+body.bf .bf-off{display:none!important}
+.bfbar{display:flex;justify-content:center;align-items:center;gap:10px 18px;flex-wrap:wrap;padding:8px var(--gutr) 8px var(--gut);background:linear-gradient(90deg,#15110a,#2a2213 30%,#3a2e18 50%,#2a2213 70%,#15110a);background-size:200% 100%;animation:bfbar 8s linear infinite;border-bottom:1px solid rgba(220,202,156,.35);text-decoration:none;font-family:var(--f-label);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi)}
+.bfbar b{font-weight:600;color:#fff8e6}
+.bfbar .cd-s{font-variant-numeric:tabular-nums;color:var(--ivory)}
+@keyframes bfbar{to{background-position:-200% 0}}
+body.bf .hero{padding-top:156px}
+.bf-sec{padding-top:8px}
+.bfc{display:grid;grid-template-columns:1.1fr .9fr;border-radius:10px;overflow:hidden;border-color:rgba(220,202,156,.55)!important;box-shadow:0 0 0 1px rgba(220,202,156,.18),0 40px 120px rgba(178,161,126,.16)}
+.bfc:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,240,200,.07) 50%,transparent 65%);background-size:250% 100%;animation:glare 6s ease-in-out infinite}
+.bfc .l{padding:38px 40px}
+.bfc .r{padding:38px 40px;background:linear-gradient(170deg,rgba(220,202,156,.13),rgba(27,52,102,.28));border-left:1px solid var(--line2);display:flex;flex-direction:column;justify-content:center}
+.bfc .tagbf{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:#15110a;background:linear-gradient(180deg,var(--gold-hi),var(--gold));padding:6px 12px;border-radius:999px}
+.bfc h2{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.04;margin:14px 0 6px}
+.bfc .ital{font-size:1.15rem}
+.stack{list-style:none;margin-top:20px;border-top:1px solid var(--line)}
+.stack li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.stack li span:last-child{font-family:var(--f-label);font-size:.8rem;letter-spacing:.06em;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.stack li.ex span:last-child{color:var(--ice)}
+.stack li.tot{border-bottom:0;padding-top:14px;color:var(--ivory)}
+.stack li.tot span:last-child{font-size:.95rem;color:var(--ivory);text-decoration:line-through;text-decoration-color:rgba(220,202,156,.7)}
+.bfc .de{font-family:var(--f-label);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bfc .de s{color:var(--txt)}
+.bfc .por{font-family:var(--f-display);font-weight:700;font-size:clamp(3rem,6vw,4.6rem);line-height:1;margin:6px 0 2px;background:linear-gradient(180deg,#fff1c9,var(--gold-hi) 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bfc .pix-t{font-family:var(--f-label);font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:24px 0 22px}
+.cd div{text-align:center;padding:10px 4px;border:1px solid var(--line2);border-radius:6px;background:rgba(11,12,15,.35)}
+.cd b{display:block;font-family:var(--f-display);font-size:1.6rem;color:var(--ivory);font-variant-numeric:tabular-nums;line-height:1.1}
+.cd span{font-family:var(--f-label);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.bfc .btn{align-self:stretch;justify-content:space-between}
+.bfc .fine{margin-top:12px;font-size:.84rem;color:var(--muted)}
+.tile .p s,.price s,.cmp s{color:var(--muted);font-size:.85em;margin-right:6px}
+
 /* ===== barra de progresso ===== */
 .prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:40;background:linear-gradient(90deg,var(--navy-hi),var(--ice),var(--gold-hi));transform-origin:left;transform:scaleX(0)}
 
@@ -291,7 +326,7 @@ footer a:hover{color:var(--gold-hi)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
 /* ===== depoimentos ===== */
-.deps{display:grid;gap:14px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.deps{display:grid;gap:14px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .deps .row{display:flex;gap:14px;width:max-content;animation:marq 70s linear infinite}
 .deps .row.b{animation-direction:reverse;animation-duration:80s}
 .deps:hover .row{animation-play-state:paused}
@@ -343,6 +378,8 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 @media (max-width:1080px){
  .links{display:none}
  .sticky{display:flex}
+ .bfc{grid-template-columns:1fr}
+ .bfc .r{border-left:0;border-top:1px solid var(--line2)}
  .inside{grid-template-columns:repeat(2,1fr)}
  .fan{height:auto;aspect-ratio:1/0.95;max-width:560px;margin-inline:auto;width:100%}
  .hero-g{grid-template-columns:1fr}
@@ -374,6 +411,9 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  .mod .mn{grid-column:1}.mod .mt{grid-column:1}.mod .mc{display:none}
  .mod svg{grid-row:1/3;grid-column:2}
  .founder .bd,.autor .bd,.final .bd{padding:28px 22px}
+ .bfc .l,.bfc .r{padding:28px 22px}
+ body.bf .hero{padding-top:150px}
+ .bfbar{font-size:.62rem;letter-spacing:.1em}
  .buy .btn,.plan .btn,.ctas .btn{width:100%;justify-content:space-between}
  .btn{white-space:normal;text-align:left;line-height:1.3}
  .brand b{font-size:1.15rem}
@@ -401,10 +441,11 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <div class="spot" aria-hidden="true"></div>
 <div class="prog" id="prog" aria-hidden="true"></div>
 
-<nav id="nav"><div class="w">
+<nav id="nav"><a class="bfbar bf-only" href="#black"><span><b>Black November</b> · Membro Fundador por R$ 1.000 no Pix</span><span>termina em <span class="cd-s" data-cd-short>—</span></span></a><div class="w">
  <a class="brand" href="#topo" aria-label="Haniel Dental CAD Works"><b>HANIEL</b><span>DENTAL CAD WORKS</span></a>
  <div class="links"><a href="#ato1">Primeiro Ato</a><a href="#ato2">Segundo Ato</a><a href="#valores">Valores</a><a href="#fundador">Membro Fundador</a><a href="#duvidas">Dúvidas</a></div>
- <a class="btn b-main" href="#valores"><span>Ver valores</span><i>→</i></a>
+ <a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a>
+ <a class="btn b-gold bf-only" href="#black"><span>Black November</span><i>→</i></a>
 </div></nav>
 
 <header class="hero" id="topo"><div class="w">
@@ -416,7 +457,8 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
    <p class="lead in">Cursos online de exocad criados por Haniel Azevedo, com foco no cadista e abertos a dentistas e ceramistas. Do primeiro contato com o CAD ao nível avançado, com método, arte e previsibilidade.</p>
    <p class="tm in">Marca registrada · Professor convidado da USP</p>
    <div class="ctas in">
-    <a class="btn b-main" href="#valores"><span>Escolher meu ato</span><i>→</i></a>
+    <a class="btn b-main bf-off" href="#valores"><span>Escolher meu ato</span><i>→</i></a>
+    <a class="btn b-gold bf-only" href="#black"><span>Quero ser fundador</span><i>→</i></a>
     <a class="btn b-glass" href="#ato1"><span>Ver o conteúdo</span><i>↓</i></a>
    </div>
    <div class="trust in"><span>Acesso por 2 anos</span><span>Certificado de conclusão</span><span>Garantia de 7 dias</span><span>Até 12x no cartão</span></div>
@@ -430,9 +472,35 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <a class="tile glass hov" href="#ato1"><span class="n">I</span><span class="label">Primeiro Ato</span><b>A Arte dos Inícios</b><small>Iniciante · 5 módulos · 18 aulas</small><span class="p">12x R$ 66,42<em>→</em></span></a>
   <a class="tile glass hov" href="#ato2"><span class="n">II</span><span class="label">Segundo Ato</span><b>A Arte das Estruturas e das Formas</b><small>Avançado · 8 módulos · 36 aulas</small><span class="p">12x R$ 99,75<em>→</em></span></a>
   <a class="tile glass hov" href="#valores"><span class="n">III</span><span class="label">Combo</span><b>Os dois atos juntos</b><small>Do início ao avançado</small><span class="p">12x R$ 149,75<em>→</em></span></a>
-  <a class="tile glass hov f" href="#fundador"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 5 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p">R$ 1.497 no Pix<em>→</em></span></a>
+  <a class="tile glass hov f" href="#fundador" data-bf-href="#black"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 5 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p"><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000 no Pix</span><em>→</em></span></a>
  </div>
 </div></header>
+
+<section class="bf-sec bf-only" id="black"><div class="w">
+ <div class="bfc glass rv">
+  <div class="l">
+   <span class="tagbf">Black November · até 30/11</span>
+   <h2>Seja Membro Fundador</h2>
+   <p class="ital">Tudo o que eu ensino, num só pacote, pelo menor preço que ele já teve.</p>
+   <ul class="stack">
+    <li><span>Primeiro Ato: A Arte dos Inícios</span><span>R$ 797</span></li>
+    <li><span>Segundo Ato: A Arte das Estruturas e das Formas</span><span>R$ 1.197</span></li>
+    <li><span>12 meses do Gestão de CAD</span><span>R$ 480</span></li>
+    <li class="ex"><span>5 bibliotecas exocad, incluindo a AADP Founder Library</span><span>exclusivo</span></li>
+    <li class="ex"><span>Grupo VIP no WhatsApp e suporte com o criador</span><span>exclusivo</span></li>
+    <li class="tot"><span>Somando só o que tem preço</span><span>R$ 2.474</span></li>
+   </ul>
+  </div>
+  <div class="r">
+   <p class="de">De <s>R$ 1.497</s> por</p>
+   <p class="por">R$ 1.000</p>
+   <p class="pix-t">à vista no Pix</p>
+   <div class="cd" role="timer" aria-label="Tempo até o fim da oferta"><div><b data-cd="d">—</b><span>dias</span></div><div><b data-cd="h">—</b><span>horas</span></div><div><b data-cd="m">—</b><span>min</span></div><div><b data-cd="s">—</b><span>seg</span></div></div>
+   <a class="btn b-gold" id="bfBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a>
+   <p class="fine">Oferta válida até 30 de novembro de 2026, às 23h59 (horário de Brasília). O pagamento é combinado direto comigo pelo WhatsApp.</p>
+  </div>
+ </div>
+</div></section>
 
 <div class="marq" aria-label="Temas dos cursos"><div class="track"><span>Perfil de emergência</span><span><i>✦</i></span><span>Coroas</span><span><i>✦</i></span><span>Prótese sobre implante</span><span><i>✦</i></span><span>Inlay · Onlay · Overlay</span><span><i>✦</i></span><span>Pontes</span><span><i>✦</i></span><span>Smile design</span><span><i>✦</i></span><span>Enceramento</span><span><i>✦</i></span><span>Canal manual</span><span><i>✦</i></span><span>Desoclusão</span><span><i>✦</i></span><span>Equilíbrio oclusal</span><span><i>✦</i></span><span>Articulador digital</span><span><i>✦</i></span><span>Montagem com foto</span><span><i>✦</i></span><span>Anatomia anterior e posterior</span><span><i>✦</i></span><span>Caracterização</span><span><i>✦</i></span><span>Planejamento full</span><span><i>✦</i></span><span>Protocolo digital</span><span><i>✦</i></span><span>Placa de bruxismo</span><span><i>✦</i></span><span>Tabela de valores</span><span><i>✦</i></span><span>Captação de clientes</span><span><i>✦</i></span><span aria-hidden="true" style="display:contents"><span>Perfil de emergência</span><span><i>✦</i></span><span>Coroas</span><span><i>✦</i></span><span>Prótese sobre implante</span><span><i>✦</i></span><span>Inlay · Onlay · Overlay</span><span><i>✦</i></span><span>Pontes</span><span><i>✦</i></span><span>Smile design</span><span><i>✦</i></span><span>Enceramento</span><span><i>✦</i></span><span>Canal manual</span><span><i>✦</i></span><span>Desoclusão</span><span><i>✦</i></span><span>Equilíbrio oclusal</span><span><i>✦</i></span><span>Articulador digital</span><span><i>✦</i></span><span>Montagem com foto</span><span><i>✦</i></span><span>Anatomia anterior e posterior</span><span><i>✦</i></span><span>Caracterização</span><span><i>✦</i></span><span>Planejamento full</span><span><i>✦</i></span><span>Protocolo digital</span><span><i>✦</i></span><span>Placa de bruxismo</span><span><i>✦</i></span><span>Tabela de valores</span><span><i>✦</i></span><span>Captação de clientes</span><span><i>✦</i></span></span></div></div>
 
@@ -515,7 +583,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
     <li>Suporte exclusivo com o criador do curso</li>
     <li>12 meses de cortesia do Gestão de CAD, o sistema de gestão para cadistas</li>
    </ul>
-   <div class="buy glass"><div><p class="price">R$ 1.497</p><p class="inst">à vista no Pix</p></div><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a></div>
+   <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.497</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000</span></p><p class="inst"><span class="bf-off">à vista no Pix</span><span class="bf-only">à vista no Pix · Black November até 30/11</span></p></div><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a></div>
   </div>
  </article>
 
@@ -537,7 +605,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
     <tr><td>12 meses de cortesia do Gestão de CAD</td><td class="n">—</td><td class="n">—</td><td class="n hl">—</td><td class="y">✓</td></tr>
     <tr><td>Certificado e acesso por 2 anos</td><td class="y">✓</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
    </tbody>
-   <tfoot><tr><td>Investimento</td><td>R$ 797</td><td>R$ 1.197</td><td class="hl">R$ 1.797</td><td>R$ 1.497 no Pix</td></tr></tfoot>
+   <tfoot><tr><td>Investimento</td><td>R$ 797</td><td>R$ 1.197</td><td class="hl">R$ 1.797</td><td><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000 no Pix</span></td></tr></tfoot>
   </table>
  </div>
  <div class="below">
@@ -570,6 +638,8 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <details class="glass rv"><summary>Nunca usei o exocad. Posso começar?</summary><p>Sim. O Primeiro Ato foi pensado para iniciantes e intermediários no CAD, e até para quem nunca teve experiência com o CAD odontológico.</p></details>
   <details class="glass rv"><summary>Em que ordem devo fazer os cursos?</summary><p>O ideal é seguir a ordem dos atos: primeiro A Arte dos Inícios, depois A Arte das Estruturas e das Formas. Se você já tem experiência sólida no exocad, pode ir direto ao Segundo Ato.</p></details>
   <details class="glass rv"><summary>Como eu assisto às aulas?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso à área de membros da Hotmart e assiste no computador, no tablet ou no celular.</p></details>
+  <details class="glass rv bf-only"><summary>Até quando vale o Membro Fundador por R$ 1.000?</summary><p>Até 30 de novembro de 2026, às 23h59 (horário de Brasília). A partir de 1º de dezembro, o Membro Fundador volta para R$ 1.497 no Pix.</p></details>
+  <details class="glass rv bf-only"><summary>Posso pagar o Membro Fundador no cartão?</summary><p>O Membro Fundador é exclusivo no Pix. Se preferir o cartão, o Combo e os atos avulsos estão disponíveis na Hotmart, em até 12x.</p></details>
   <details class="glass rv"><summary>Por quanto tempo tenho acesso?</summary><p>Você tem 2 anos de acesso a todas as aulas do curso que comprar, a partir da data da compra.</p></details>
   <details class="glass rv"><summary>O curso tem certificado?</summary><p>Sim. Ao concluir o curso, você recebe o certificado de conclusão pela área de membros da Hotmart.</p></details>
   <details class="glass rv"><summary>Posso parcelar? Tem desconto no Pix?</summary><p>Na Hotmart você parcela em até 12x. Para pagar no Pix com desconto, toque em “Desconto no Pix” e fale direto pelo WhatsApp.</p></details>
@@ -591,7 +661,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  </div>
 </div></section>
 
-<div class="sticky" id="sticky"><div><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main" href="#valores"><span>Ver valores</span><i>→</i></a></div>
+<div class="sticky" id="sticky"><div class="bf-off"><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a><div class="bf-only"><b>Fundador por R$ 1.000 no Pix</b><small>Black November · até 30/11</small></div><a class="btn b-gold bf-only" href="#black"><span>Ver oferta</span><i>→</i></a></div>
 
 <footer><div class="w">
  <div>© <span id="ano">2026</span> Haniel Dental CAD Works. Todos os direitos reservados. A Arte da Previsibilidade® é marca registrada.</div>
@@ -611,7 +681,17 @@ function wa(t){return WA+encodeURIComponent(t)}
 var NOME={ato1:"A Arte dos Inícios (R$ 797)",ato2:"A Arte das Estruturas e das Formas (R$ 1.197)",combo:"o combo com os dois atos (R$ 1.797)",oclusao:"a aula O Cadista e a Oclusão"};
 document.querySelectorAll("[data-checkout]").forEach(function(a){var k=a.dataset.checkout;a.href=CHECKOUT[k]||wa("Olá, Haniel! Quero comprar "+NOME[k]+".");a.target="_blank";a.rel="noopener"});
 document.querySelectorAll("[data-pix]").forEach(function(a){a.href=wa("Olá, Haniel! Quero comprar "+a.dataset.pix+" com desconto no Pix.");a.target="_blank";a.rel="noopener"});
-var fb=document.getElementById("founderBtn");fb.href=wa("Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).");fb.target="_blank";fb.rel="noopener";
+/* ===== Black November: liga até 30/11/2026 23h59 (Brasília) e some sozinha depois ===== */
+var BF_END=Date.parse("2026-12-01T00:00:00-03:00"),BF=Date.now()<BF_END;
+if(BF){document.body.classList.add("bf");document.querySelectorAll("[data-bf-href]").forEach(function(a){a.setAttribute("href",a.dataset.bfHref)})}
+var FUND_MSG=BF?"Olá, Haniel! Quero ser Membro Fundador na Black November (R$ 1.000 à vista no Pix).":"Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).";
+var fb=document.getElementById("founderBtn");fb.href=wa(FUND_MSG);fb.target="_blank";fb.rel="noopener";
+var bb=document.getElementById("bfBtn");if(bb){bb.href=wa(FUND_MSG);bb.target="_blank";bb.rel="noopener"}
+if(BF){var p2=function(n){return String(n).padStart(2,"0")};
+ (function tick(){var t=Math.max(0,BF_END-1000-Date.now()),d=Math.floor(t/864e5),h=Math.floor(t/36e5)%24,m=Math.floor(t/6e4)%60,sec=Math.floor(t/1e3)%60;
+  document.querySelectorAll("[data-cd]").forEach(function(el){el.textContent={d:d,h:p2(h),m:p2(m),s:p2(sec)}[el.dataset.cd]});
+  document.querySelectorAll("[data-cd-short]").forEach(function(el){el.textContent=d+"d "+p2(h)+"h "+p2(m)+"min"});
+  if(t<=0){location.reload();return}setTimeout(tick,1000)})();}
 var wf=document.getElementById("waFaq");wf.href=wa("Olá, Haniel! Tenho uma dúvida sobre os cursos A Arte da Previsibilidade.");wf.target="_blank";wf.rel="noopener";
 document.getElementById("ano").textContent=new Date().getFullYear();
 
@@ -699,7 +779,7 @@ var nav=document.getElementById("nav"),root=document.documentElement,sils=docume
 var prog=document.getElementById("prog"),sticky=document.getElementById("sticky"),valores=document.getElementById("valores");
 function onScroll(){nav.classList.toggle("on",scrollY>30);
  var max=document.documentElement.scrollHeight-innerHeight;prog.style.transform="scaleX("+(max>0?scrollY/max:0)+")";
- var v=valores.getBoundingClientRect();sticky.classList.toggle("on",scrollY>innerHeight*0.9&&!(v.top<innerHeight&&v.bottom>0));if(!reduce){var y=scrollY;for(var i=0;i<sils.length;i++){sils[i].style.translate="0 "+(-y*0.04*sils[i].dataset.depth)+"px"}}}
+ var v=valores.getBoundingClientRect(),bk=document.getElementById("black"),k=bk&&bk.offsetParent?bk.getBoundingClientRect():{top:9e9,bottom:-1};sticky.classList.toggle("on",scrollY>innerHeight*0.9&&!(v.top<innerHeight&&v.bottom>0)&&!(k.top<innerHeight&&k.bottom>0));if(!reduce){var y=scrollY;for(var i=0;i<sils.length;i++){sils[i].style.translate="0 "+(-y*0.04*sils[i].dataset.depth)+"px"}}}
 onScroll();addEventListener("scroll",onScroll,{passive:true});
 if(fine&&!reduce){
  addEventListener("pointermove",function(e){root.style.setProperty("--mx",e.clientX+"px");root.style.setProperty("--my",e.clientY+"px")},{passive:true});
