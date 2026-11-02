@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://hanieldentalcad.github.io/aadp-cursos/">
-<meta name="theme-color" content="#0B0C0F">
+<meta name="theme-color" content="#0B0A08">
 <style>
 @font-face{font-family:"Arvo";font-weight:700;font-display:swap;src:url(fonts/arvo-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:"Jost";font-weight:400;font-display:swap;src:url(fonts/jost-latin-400-normal.woff2) format("woff2")}
@@ -26,8 +26,8 @@
 /* Layout: página larga em faixas; vidro sobre um fundo vivo de silhuetas de prótese e CAD. Identidade do site hanieldentalcad.com. */
 :root{
  color-scheme:dark;
- --bg:#0B0C0F; --bg2:#101218; --ivory:#ECE4CE; --txt:#CFC8B6; --muted:#8E887A;
- --gold:#B2A17E; --gold-hi:#DCCA9C; --navy:#1B3466; --navy-hi:#2A4E92; --ice:#8FB6D8;
+ --bg:#0A0908; --bg2:#12100D; --ivory:#ECE4CE; --txt:#CFC8B6; --muted:#8E887A;
+ --gold:#B89B66; --gold-hi:#E3CB95; --navy:#2A2213; --navy-hi:#6E562C; --ice:#D9CDB2;
  --glass:rgba(255,255,255,.035); --glass2:rgba(255,255,255,.06); --line:rgba(236,228,206,.09); --line2:rgba(178,161,126,.35);
  --f-display:"Arvo",Georgia,serif; --f-label:"Jost",system-ui,sans-serif; --f-text:"Libre Caslon Text",Georgia,serif;
  --f-elegant:"Libre Caslon Display",Georgia,serif; --f-ital:"Zilla Slab",Georgia,serif;
@@ -52,15 +52,15 @@ section{position:relative;padding-block:72px}
 /* ===== fundo vivo ===== */
 .fx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .fx .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:orb 26s ease-in-out infinite alternate}
-.fx .o1{width:48vw;height:48vw;left:-12vw;top:-14vw;background:radial-gradient(circle,rgba(27,52,102,.85),transparent 70%)}
+.fx .o1{width:48vw;height:48vw;left:-12vw;top:-14vw;background:radial-gradient(circle,rgba(58,46,24,.85),transparent 70%)}
 .fx .o2{width:40vw;height:40vw;right:-10vw;top:30vh;background:radial-gradient(circle,rgba(178,161,126,.28),transparent 70%);animation-duration:32s}
-.fx .o3{width:36vw;height:36vw;left:30vw;bottom:-18vw;background:radial-gradient(circle,rgba(143,182,216,.22),transparent 70%);animation-duration:38s}
+.fx .o3{width:36vw;height:36vw;left:30vw;bottom:-18vw;background:radial-gradient(circle,rgba(217,205,178,.22),transparent 70%);animation-duration:38s}
 @keyframes orb{to{transform:translate(6vw,4vh) scale(1.12)}}
 .fx .grid{position:absolute;inset:0;background-image:radial-gradient(rgba(236,228,206,.07) 1px,transparent 1.2px);background-size:34px 34px;mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent 85%)}
-.sil{position:absolute;color:var(--ice);opacity:.13;filter:drop-shadow(0 0 18px rgba(143,182,216,.55));animation:float 18s ease-in-out infinite alternate;will-change:transform}
+.sil{position:absolute;color:var(--ice);opacity:.13;filter:drop-shadow(0 0 18px rgba(217,205,178,.55));animation:float 18s ease-in-out infinite alternate;will-change:transform}
 .sil.g{color:var(--gold-hi);filter:drop-shadow(0 0 18px rgba(220,202,156,.5));opacity:.11}
 @keyframes float{0%{transform:translate3d(0,0,0) rotate(var(--r,0deg))}100%{transform:translate3d(var(--dx,20px),var(--dy,-40px),0) rotate(calc(var(--r,0deg) + 8deg))}}
-.spot{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,30%),rgba(143,182,216,.07),transparent 70%)}
+.spot{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,30%),rgba(217,205,178,.07),transparent 70%)}
 
 /* ===== vidro ===== */
 .glass{position:relative;background:linear-gradient(160deg,var(--glass2),var(--glass) 40%,rgba(255,255,255,.015));border:1px solid var(--line);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 20px 60px rgba(0,0,0,.35)}
@@ -74,9 +74,9 @@ section{position:relative;padding-block:72px}
 .btn:hover i{transform:translateX(3px) rotate(-45deg)}
 .btn:after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:sheen 4.5s ease-in-out infinite}
 @keyframes sheen{0%,70%{left:-60%}100%{left:130%}}
-.b-main{background:linear-gradient(135deg,var(--navy-hi),var(--navy));color:#fff;border-color:rgba(143,182,216,.45);box-shadow:0 0 0 0 rgba(143,182,216,.4),0 12px 34px rgba(27,52,102,.55)}
+.b-main{background:linear-gradient(135deg,#8a6d38,var(--navy-hi) 45%,var(--navy));color:#fff6e2;border-color:rgba(217,205,178,.45);box-shadow:0 0 0 0 rgba(217,205,178,.4),0 12px 34px rgba(58,46,24,.55)}
 .b-main i{background:var(--ice);color:var(--navy)}
-.b-main:hover{box-shadow:0 0 0 6px rgba(143,182,216,.12),0 16px 44px rgba(27,52,102,.7)}
+.b-main:hover{box-shadow:0 0 0 6px rgba(217,205,178,.12),0 16px 44px rgba(58,46,24,.7)}
 .b-gold{background:linear-gradient(135deg,#E7D6A6,var(--gold) 60%,#8E7E5C);color:#15110A;box-shadow:0 12px 34px rgba(178,161,126,.28)}
 .b-gold i{background:#15110A;color:var(--gold-hi)}
 .b-gold:hover{box-shadow:0 0 0 6px rgba(178,161,126,.14),0 16px 44px rgba(178,161,126,.38)}
@@ -106,7 +106,7 @@ nav .btn i{width:30px;height:30px}
 .hero-g{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
 .hero-g>*,.ato>*,.mani>*,.founder>*,.autor>*,.final>*,.plans>*,.below>*,.buy>*{min-width:0}
 .hero h1{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(2.4rem,4.3vw,4.6rem);line-height:.98;letter-spacing:.005em;margin:16px 0 14px}
-.hero h1 span{display:block;background:linear-gradient(100deg,var(--ice) 0%,#cfe2f2 25%,var(--ice) 45%,var(--gold-hi) 70%,var(--ice) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s linear infinite}
+.hero h1 span{display:block;background:linear-gradient(100deg,var(--ice) 0%,#fff3d6 25%,var(--ice) 45%,var(--gold-hi) 70%,var(--ice) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s linear infinite}
 @keyframes shimmer{to{background-position:-250% 0}}
 .hero .ital{font-size:clamp(1.25rem,2vw,1.55rem)}
 .hero .lead{max-width:590px;margin-top:16px;font-size:1.06rem}
@@ -185,7 +185,7 @@ nav .btn i{width:30px;height:30px}
 .plan .s{color:var(--muted);font-size:.95rem}
 .plan .price{margin-top:20px}
 .plan .btn{margin-top:22px;align-self:flex-start}
-.plan.best{border-color:rgba(143,182,216,.45);background:linear-gradient(160deg,rgba(42,78,146,.32),rgba(27,52,102,.12) 60%,rgba(255,255,255,.02))}
+.plan.best{border-color:rgba(217,205,178,.45);background:linear-gradient(160deg,rgba(110,86,44,.32),rgba(58,46,24,.12) 60%,rgba(255,255,255,.02))}
 .tag{position:absolute;top:0;right:0;font-family:var(--f-label);font-weight:600;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;background:var(--navy-hi);color:#fff;padding:6px 12px;border-bottom-left-radius:5px;border-top-right-radius:5px}
 .eco{margin-top:6px;color:var(--ice);font-size:.9rem}
 .legal{margin-top:14px;text-align:center;color:var(--muted);font-size:.9rem}
@@ -194,7 +194,7 @@ nav .btn i{width:30px;height:30px}
 .founder figure{position:relative;overflow:hidden}
 .founder figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .founder:hover figure img{transform:scale(1.04)}
-.founder .bd{padding:36px 40px;background:linear-gradient(160deg,rgba(27,52,102,.55),rgba(11,12,15,.4))}
+.founder .bd{padding:36px 40px;background:linear-gradient(160deg,rgba(58,46,24,.55),rgba(11,12,15,.4))}
 .founder h3{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.05;margin:10px 0 6px}
 .founder ul{list-style:none;display:grid;gap:9px;margin:18px 0 22px}
 .founder li{padding-left:24px;position:relative}
@@ -262,16 +262,20 @@ footer a:hover{color:var(--gold-hi)}
 /* ===== Black November (some sozinho em 1/12/2026) ===== */
 body:not(.bf) .bf-only{display:none!important}
 body.bf .bf-off{display:none!important}
-.bfbar{display:flex;justify-content:center;align-items:center;gap:10px 18px;flex-wrap:wrap;padding:8px var(--gutr) 8px var(--gut);background:linear-gradient(90deg,#15110a,#2a2213 30%,#3a2e18 50%,#2a2213 70%,#15110a);background-size:200% 100%;animation:bfbar 8s linear infinite;border-bottom:1px solid rgba(220,202,156,.35);text-decoration:none;font-family:var(--f-label);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi)}
+.bfbar{display:flex;justify-content:center;align-items:center;gap:12px 28px;flex-wrap:wrap;min-height:64px;padding:12px var(--gutr) 12px var(--gut);background:linear-gradient(90deg,#15110a,#2a2213 30%,#3a2e18 50%,#2a2213 70%,#15110a);background-size:200% 100%;animation:bfbar 8s linear infinite;border-bottom:1px solid rgba(220,202,156,.35);text-decoration:none;font-family:var(--f-label);font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi)}
 .bfbar b{font-weight:600;color:#fff8e6}
+.bfbar .big{font-family:var(--f-display);font-weight:700;font-size:1.15rem;letter-spacing:.06em;color:#fff1c9}
+.bfbar .cdb{display:inline-flex;gap:6px}
+.bfbar .cdb span{min-width:46px;padding:4px 6px;border:1px solid rgba(227,203,149,.45);border-radius:5px;background:rgba(10,9,8,.45);text-align:center;font-variant-numeric:tabular-nums;color:#fff8e6;font-weight:600;letter-spacing:.04em}
+.bfbar .cdb small{display:block;font-size:.5rem;letter-spacing:.16em;color:var(--gold);font-weight:500}
 .bfbar .cd-s{font-variant-numeric:tabular-nums;color:var(--ivory)}
 @keyframes bfbar{to{background-position:-200% 0}}
-body.bf .hero{padding-top:156px}
+body.bf .hero{padding-top:184px}
 .bf-sec{padding-top:8px}
 .bfc{display:grid;grid-template-columns:1.1fr .9fr;border-radius:10px;overflow:hidden;border-color:rgba(220,202,156,.55)!important;box-shadow:0 0 0 1px rgba(220,202,156,.18),0 40px 120px rgba(178,161,126,.16)}
 .bfc:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,240,200,.07) 50%,transparent 65%);background-size:250% 100%;animation:glare 6s ease-in-out infinite}
 .bfc .l{padding:38px 40px}
-.bfc .r{padding:38px 40px;background:linear-gradient(170deg,rgba(220,202,156,.13),rgba(27,52,102,.28));border-left:1px solid var(--line2);display:flex;flex-direction:column;justify-content:center}
+.bfc .r{padding:38px 40px;background:linear-gradient(170deg,rgba(220,202,156,.13),rgba(58,46,24,.28));border-left:1px solid var(--line2);display:flex;flex-direction:column;justify-content:center}
 .bfc .tagbf{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:#15110a;background:linear-gradient(180deg,var(--gold-hi),var(--gold));padding:6px 12px;border-radius:999px}
 .bfc h2{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.04;margin:14px 0 6px}
 .bfc .ital{font-size:1.15rem}
@@ -302,11 +306,11 @@ body.bf .hero{padding-top:156px}
 .fan .card .frame{padding:7px;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
 .fan .card img{aspect-ratio:2/3;width:100%;object-fit:cover;border-radius:3px}
 .fan .card:hover{z-index:5}
-.fan .card:hover .frame{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(143,182,216,.18)}
+.fan .card:hover .frame{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(217,205,178,.18)}
 .fan .c1{left:6%;top:7%;transform:rotate(-6deg);z-index:2}
 .fan .c2{right:6%;top:0;transform:rotate(5deg);z-index:3;animation-delay:-3.5s}
 .fan .c3{left:30%;top:16%;width:40%;transform:rotate(-1deg);z-index:1;animation-delay:-1.8s;opacity:.92}
-.fan .c3 .frame{aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px;background:linear-gradient(170deg,rgba(143,182,216,.10),rgba(11,12,15,.6))}
+.fan .c3 .frame{aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px;background:linear-gradient(170deg,rgba(217,205,178,.10),rgba(11,12,15,.6))}
 .fan .c3 b{font-family:var(--f-text);font-weight:400;color:var(--ivory);font-size:1.05rem;line-height:1.3}
 .fan .c3 small{font-family:var(--f-label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice)}
 .fan .cap{display:flex;justify-content:space-between;margin-top:10px;font-family:var(--f-label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
@@ -362,7 +366,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 .cmp th:first-child,.cmp td:first-child{text-align:left;padding-left:24px}
 .cmp thead th{font-family:var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .cmp thead th.hl{color:var(--ice)}
-.cmp td.hl{background:rgba(42,78,146,.14)}
+.cmp td.hl{background:rgba(110,86,44,.14)}
 .cmp td.y{color:var(--gold-hi);font-family:var(--f-label)}
 .cmp td.n{color:rgba(142,136,122,.45)}
 .cmp tfoot td{font-family:var(--f-text);color:var(--ivory);border-bottom:0;padding-block:16px}
@@ -412,8 +416,10 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  .mod svg{grid-row:1/3;grid-column:2}
  .founder .bd,.autor .bd,.final .bd{padding:28px 22px}
  .bfc .l,.bfc .r{padding:28px 22px}
- body.bf .hero{padding-top:150px}
- .bfbar{font-size:.62rem;letter-spacing:.1em}
+ body.bf .hero{padding-top:200px}
+ .bfbar{font-size:.66rem;letter-spacing:.1em;gap:6px 14px;min-height:0;padding-block:10px}
+ .bfbar .big{font-size:.95rem}
+ .bfbar .cdb span{min-width:38px;padding:3px 4px}
  .buy .btn,.plan .btn,.ctas .btn{width:100%;justify-content:space-between}
  .btn{white-space:normal;text-align:left;line-height:1.3}
  .brand b{font-size:1.15rem}
@@ -441,7 +447,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <div class="spot" aria-hidden="true"></div>
 <div class="prog" id="prog" aria-hidden="true"></div>
 
-<nav id="nav"><a class="bfbar bf-only" href="#black"><span><b>Black November</b> · Membro Fundador por R$ 1.000 no Pix</span><span>termina em <span class="cd-s" data-cd-short>—</span></span></a><div class="w">
+<nav id="nav"><a class="bfbar bf-only" href="#black"><span class="big">BLACK NOVEMBER</span><span><b>Membro Fundador por R$ 999 no Pix</b> · termina em</span><span class="cdb"><span><b data-cd="d">—</b><small>dias</small></span><span><b data-cd="h">—</b><small>horas</small></span><span><b data-cd="m">—</b><small>min</small></span><span><b data-cd="s">—</b><small>seg</small></span></span></a><div class="w">
  <a class="brand" href="#topo" aria-label="Haniel Dental CAD Works"><b>HANIEL</b><span>DENTAL CAD WORKS</span></a>
  <div class="links"><a href="#ato1">Primeiro Ato</a><a href="#ato2">Segundo Ato</a><a href="#valores">Valores</a><a href="#fundador">Membro Fundador</a><a href="#duvidas">Dúvidas</a></div>
  <a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a>
@@ -469,10 +475,10 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   </div>
  </div>
  <div class="tiles">
-  <a class="tile glass hov" href="#ato1"><span class="n">I</span><span class="label">Primeiro Ato</span><b>A Arte dos Inícios</b><small>Iniciante · 5 módulos · 18 aulas</small><span class="p">12x R$ 66,42<em>→</em></span></a>
-  <a class="tile glass hov" href="#ato2"><span class="n">II</span><span class="label">Segundo Ato</span><b>A Arte das Estruturas e das Formas</b><small>Avançado · 8 módulos · 36 aulas</small><span class="p">12x R$ 99,75<em>→</em></span></a>
-  <a class="tile glass hov" href="#valores"><span class="n">III</span><span class="label">Combo</span><b>Os dois atos juntos</b><small>Do início ao avançado</small><span class="p">12x R$ 149,75<em>→</em></span></a>
-  <a class="tile glass hov f" href="#fundador" data-bf-href="#black"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 5 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p"><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000 no Pix</span><em>→</em></span></a>
+  <a class="tile glass hov" href="#ato1"><span class="n">I</span><span class="label">Primeiro Ato</span><b>A Arte dos Inícios</b><small>Iniciante · 5 módulos · 18 aulas</small><span class="p"><span class="bf-off">12x R$ 66,42</span><span class="bf-only"><s>R$ 797</s>R$ 597</span><em>→</em></span></a>
+  <a class="tile glass hov" href="#ato2"><span class="n">II</span><span class="label">Segundo Ato</span><b>A Arte das Estruturas e das Formas</b><small>Avançado · 8 módulos · 36 aulas</small><span class="p"><span class="bf-off">12x R$ 99,75</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span><em>→</em></span></a>
+  <a class="tile glass hov" href="#valores"><span class="n">III</span><span class="label">Combo</span><b>Os dois atos juntos</b><small>Do início ao avançado</small><span class="p"><span class="bf-off">12x R$ 149,75</span><span class="bf-only"><s>R$ 1.797</s>R$ 1.297</span><em>→</em></span></a>
+  <a class="tile glass hov f" href="#fundador" data-bf-href="#black"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 5 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p"><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 999 no Pix</span><em>→</em></span></a>
  </div>
 </div></header>
 
@@ -481,23 +487,24 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <div class="l">
    <span class="tagbf">Black November · até 30/11</span>
    <h2>Seja Membro Fundador</h2>
-   <p class="ital">Tudo o que eu ensino, num só pacote, pelo menor preço que ele já teve.</p>
+   <p class="ital">Tudo o que eu ensino, num só pacote.</p>
    <ul class="stack">
     <li><span>Primeiro Ato: A Arte dos Inícios</span><span>R$ 797</span></li>
     <li><span>Segundo Ato: A Arte das Estruturas e das Formas</span><span>R$ 1.197</span></li>
     <li><span>12 meses do Gestão de CAD</span><span>R$ 480</span></li>
     <li class="ex"><span>5 bibliotecas exocad, incluindo a AADP Founder Library</span><span>exclusivo</span></li>
-    <li class="ex"><span>Grupo VIP no WhatsApp e suporte com o criador</span><span>exclusivo</span></li>
+    <li class="ex"><span>Grupo VIP dos Membros Fundadores no WhatsApp</span><span>exclusivo</span></li>
+    <li class="ex"><span>Suporte exclusivo com o criador do curso</span><span>exclusivo</span></li>
     <li class="tot"><span>Somando só o que tem preço</span><span>R$ 2.474</span></li>
    </ul>
   </div>
   <div class="r">
    <p class="de">De <s>R$ 1.497</s> por</p>
-   <p class="por">R$ 1.000</p>
+   <p class="por">R$ 999</p>
    <p class="pix-t">à vista no Pix</p>
    <div class="cd" role="timer" aria-label="Tempo até o fim da oferta"><div><b data-cd="d">—</b><span>dias</span></div><div><b data-cd="h">—</b><span>horas</span></div><div><b data-cd="m">—</b><span>min</span></div><div><b data-cd="s">—</b><span>seg</span></div></div>
    <a class="btn b-gold" id="bfBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a>
-   <p class="fine">Oferta válida até 30 de novembro de 2026, às 23h59 (horário de Brasília). O pagamento é combinado direto comigo pelo WhatsApp.</p>
+   <p class="fine">Oferta válida até 30 de novembro de 2026, às 23h59 (horário de Brasília). Pagamento à vista no Pix, direto comigo pelo WhatsApp: eu mesmo libero o seu acesso aos cursos, às bibliotecas, ao grupo e ao Gestão de CAD.</p>
   </div>
  </div>
 </div></section>
@@ -515,15 +522,6 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  </div>
 </div></section>
 
-<section style="padding-top:0"><div class="w">
- <div class="head rv"><div><p class="label">Para quem é</p><h2 class="h2">Um caminho para cada momento</h2></div></div>
- <div class="tres">
-  <div class="glass hov rv"><span class="n">I</span><h3>Você está começando</h3><p>O Primeiro Ato é indicado para iniciantes e intermediários no CAD, ou até mesmo para quem nunca teve experiência com o CAD odontológico.</p></div>
-  <div class="glass hov rv"><span class="n">II</span><h3>Você quer outro nível</h3><p>O Segundo Ato é avançado: oclusão, articulador, formas, planejamento, protocolos e placas.</p></div>
-  <div class="glass hov rv"><span class="n">III</span><h3>Você quer viver de CAD</h3><p>Como captar clientes, usar o Instagram e montar a sua tabela de valores. O CAD como profissão.</p></div>
- </div>
-</div></section>
-
 <section id="ato1"><div class="w ato">
  <div class="cover rv"><div class="frame glass tilt"><img src="imagens/inicios.jpg" alt="Capa do curso A Arte dos Inícios" width="720" height="1080" loading="lazy"></div></div>
  <div class="rv">
@@ -533,7 +531,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <p class="d">Para quem está começando e quer começar do jeito certo. Antes da técnica, da forma e da função, existe uma decisão silenciosa: o início. É ali que se define a direção, o nível de entrega e a identidade de tudo o que vem depois.</p>
   <ul class="stats"><li><b data-count="5">5</b><span>Módulos</span></li><li><b data-count="18">18</b><span>Aulas</span></li><li><b>+12h</b><span>De conteúdo</span></li><li><b>Iniciante</b><span>Nível</span></li></ul>
   <div class="mods" data-mods="ato1"></div>
-  <div class="buy glass"><div><p class="price">R$ 797<a class="pix" data-pix="A Arte dos Inícios" href="#">Desconto no Pix</a></p><p class="inst">à vista ou em até 12x de R$ 66,42 na Hotmart</p></div><a class="btn b-main" data-checkout="ato1" href="#"><span>Comprar agora</span><i>→</i></a></div>
+  <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 797</span><span class="bf-only"><s>R$ 797</s>R$ 597</span><a class="pix bf-off" data-pix="A Arte dos Inícios" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 66,42 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p></div><a class="btn b-main" data-checkout="ato1" href="#"><span>Comprar agora</span><i>→</i></a></div>
  </div>
 </div></section>
 
@@ -546,7 +544,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <p class="d">Um outro nível de avançado: oclusão, articulador, formas, planejamento, protocolos e placas, até a forma de captar clientes. Indicado para quem quer alcançar um nível elevado de cadista. Você está preparado?</p>
   <ul class="stats"><li><b data-count="8">8</b><span>Módulos</span></li><li><b data-count="36">36</b><span>Aulas</span></li><li><b>+18h</b><span>De conteúdo</span></li><li><b>Avançado</b><span>Nível</span></li></ul>
   <div class="mods" data-mods="ato2"></div>
-  <div class="buy glass"><div><p class="price">R$ 1.197<a class="pix" data-pix="A Arte das Estruturas e das Formas" href="#">Desconto no Pix</a></p><p class="inst">à vista ou em até 12x de R$ 99,75 na Hotmart</p></div><a class="btn b-main" data-checkout="ato2" href="#"><span>Comprar agora</span><i>→</i></a></div>
+  <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.197</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span><a class="pix bf-off" data-pix="A Arte das Estruturas e das Formas" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 99,75 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p></div><a class="btn b-main" data-checkout="ato2" href="#"><span>Comprar agora</span><i>→</i></a></div>
  </div>
 </div></section>
 
@@ -564,10 +562,11 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <section id="valores"><div class="w">
  <div class="head rv"><div><p class="label">Valores</p><h2 class="h2">Escolha o seu ato</h2></div><p>Acesso pela área de membros da Hotmart, no computador ou no celular. Gravado em Roma, Florença e St. Moritz.</p></div>
  <div class="plans">
-  <article class="plan glass hov rv"><p class="label">Primeiro Ato</p><h3>A Arte dos Inícios</h3><p class="s">Iniciante</p><p class="price">R$ 797<a class="pix" data-pix="A Arte dos Inícios" href="#">Desconto no Pix</a></p><p class="inst">à vista ou em até 12x de R$ 66,42 na Hotmart</p><a class="btn b-glass" data-checkout="ato1" href="#"><span>Comprar agora</span><i>→</i></a></article>
-  <article class="plan glass hov rv"><p class="label">Segundo Ato</p><h3>A Arte das Estruturas e das Formas</h3><p class="s">Avançado</p><p class="price">R$ 1.197<a class="pix" data-pix="A Arte das Estruturas e das Formas" href="#">Desconto no Pix</a></p><p class="inst">à vista ou em até 12x de R$ 99,75 na Hotmart</p><a class="btn b-glass" data-checkout="ato2" href="#"><span>Comprar agora</span><i>→</i></a></article>
-  <article class="plan glass hov best rv"><span class="tag">Mais completo</span><p class="label">Combo</p><h3>Os dois atos: Inícios &amp; Estruturas e Formas</h3><p class="s">O caminho completo, do início ao avançado.</p><p class="price">R$ 1.797<a class="pix" data-pix="o combo com os dois atos" href="#">Desconto no Pix</a></p><p class="inst">à vista ou em até 12x de R$ 149,75 na Hotmart</p><p class="eco">Economia de R$ 197 em relação aos atos separados</p><a class="btn b-main" data-checkout="combo" href="#"><span>Comprar agora</span><i>→</i></a></article>
+  <article class="plan glass hov rv"><p class="label">Primeiro Ato</p><h3>A Arte dos Inícios</h3><p class="s">Iniciante</p><p class="price"><span class="bf-off">R$ 797</span><span class="bf-only"><s>R$ 797</s>R$ 597</span><a class="pix bf-off" data-pix="A Arte dos Inícios" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 66,42 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p><a class="btn b-glass" data-checkout="ato1" href="#"><span>Comprar agora</span><i>→</i></a></article>
+  <article class="plan glass hov rv"><p class="label">Segundo Ato</p><h3>A Arte das Estruturas e das Formas</h3><p class="s">Avançado</p><p class="price"><span class="bf-off">R$ 1.197</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span><a class="pix bf-off" data-pix="A Arte das Estruturas e das Formas" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 99,75 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p><a class="btn b-glass" data-checkout="ato2" href="#"><span>Comprar agora</span><i>→</i></a></article>
+  <article class="plan glass hov best rv"><span class="tag">Mais completo</span><p class="label">Combo</p><h3>Os dois atos: Inícios &amp; Estruturas e Formas</h3><p class="s">O caminho completo, do início ao avançado.</p><p class="price"><span class="bf-off">R$ 1.797</span><span class="bf-only"><s>R$ 1.797</s>R$ 1.297</span><a class="pix bf-off" data-pix="o combo com os dois atos" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 149,75 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p><p class="eco">Economia de R$ 197 em relação aos atos separados<span class="bf-only"> também na Black</span></p><a class="btn b-main" data-checkout="combo" href="#"><span>Comprar agora</span><i>→</i></a></article>
  </div>
+ <p class="legal bf-only">Só o Gestão de CAD? Na Black November, o plano anual sai por <b style="color:var(--ivory);font-weight:400">R$ 297</b> (de R$ 360). <a data-checkout="gestao" href="#">Assinar o anual</a></p>
  <p class="legal">Compra pela Hotmart, com 7 dias para desistir da compra. <a href="https://hanieldentalcad.com/privacidade" target="_blank" rel="noopener">Termos de venda e licença</a>.</p>
 
  <article class="founder glass rv" id="fundador">
@@ -583,7 +582,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
     <li>Suporte exclusivo com o criador do curso</li>
     <li>12 meses de cortesia do Gestão de CAD, o sistema de gestão para cadistas</li>
    </ul>
-   <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.497</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000</span></p><p class="inst"><span class="bf-off">à vista no Pix</span><span class="bf-only">à vista no Pix · Black November até 30/11</span></p></div><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a></div>
+   <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.497</span><span class="bf-only"><s>R$ 1.497</s>R$ 999</span></p><p class="inst"><span class="bf-off">à vista no Pix</span><span class="bf-only">à vista no Pix · Black November até 30/11</span></p></div><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a></div>
   </div>
  </article>
 
@@ -605,7 +604,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
     <tr><td>12 meses de cortesia do Gestão de CAD</td><td class="n">—</td><td class="n">—</td><td class="n hl">—</td><td class="y">✓</td></tr>
     <tr><td>Certificado e acesso por 2 anos</td><td class="y">✓</td><td class="y">✓</td><td class="y hl">✓</td><td class="y">✓</td></tr>
    </tbody>
-   <tfoot><tr><td>Investimento</td><td>R$ 797</td><td>R$ 1.197</td><td class="hl">R$ 1.797</td><td><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 1.000 no Pix</span></td></tr></tfoot>
+   <tfoot><tr><td>Investimento</td><td><span class="bf-off">R$ 797</span><span class="bf-only"><s>R$ 797</s>R$ 597</span></td><td><span class="bf-off">R$ 1.197</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span></td><td class="hl"><span class="bf-off">R$ 1.797</span><span class="bf-only"><s>R$ 1.797</s>R$ 1.297</span></td><td><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 999 no Pix</span></td></tr></tfoot>
   </table>
  </div>
  <div class="below">
@@ -638,8 +637,8 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <details class="glass rv"><summary>Nunca usei o exocad. Posso começar?</summary><p>Sim. O Primeiro Ato foi pensado para iniciantes e intermediários no CAD, e até para quem nunca teve experiência com o CAD odontológico.</p></details>
   <details class="glass rv"><summary>Em que ordem devo fazer os cursos?</summary><p>O ideal é seguir a ordem dos atos: primeiro A Arte dos Inícios, depois A Arte das Estruturas e das Formas. Se você já tem experiência sólida no exocad, pode ir direto ao Segundo Ato.</p></details>
   <details class="glass rv"><summary>Como eu assisto às aulas?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso à área de membros da Hotmart e assiste no computador, no tablet ou no celular.</p></details>
-  <details class="glass rv bf-only"><summary>Até quando vale o Membro Fundador por R$ 1.000?</summary><p>Até 30 de novembro de 2026, às 23h59 (horário de Brasília). A partir de 1º de dezembro, o Membro Fundador volta para R$ 1.497 no Pix.</p></details>
-  <details class="glass rv bf-only"><summary>Posso pagar o Membro Fundador no cartão?</summary><p>O Membro Fundador é exclusivo no Pix. Se preferir o cartão, o Combo e os atos avulsos estão disponíveis na Hotmart, em até 12x.</p></details>
+  <details class="glass rv bf-only"><summary>Até quando vale o Membro Fundador por R$ 999?</summary><p>Até 30 de novembro de 2026, às 23h59 (horário de Brasília). A partir de 1º de dezembro, o Membro Fundador volta para R$ 1.497 no Pix.</p></details>
+  <details class="glass rv bf-only"><summary>Posso pagar o Membro Fundador no cartão?</summary><p>O Membro Fundador é exclusivo no Pix. Se preferir o cartão, o Combo e os atos avulsos estão na Hotmart com desconto de Black November, em até 12x (os juros do parcelamento ficam por conta de quem compra).</p></details>
   <details class="glass rv"><summary>Por quanto tempo tenho acesso?</summary><p>Você tem 2 anos de acesso a todas as aulas do curso que comprar, a partir da data da compra.</p></details>
   <details class="glass rv"><summary>O curso tem certificado?</summary><p>Sim. Ao concluir o curso, você recebe o certificado de conclusão pela área de membros da Hotmart.</p></details>
   <details class="glass rv"><summary>Posso parcelar? Tem desconto no Pix?</summary><p>Na Hotmart você parcela em até 12x. Para pagar no Pix com desconto, toque em “Desconto no Pix” e fale direto pelo WhatsApp.</p></details>
@@ -661,7 +660,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  </div>
 </div></section>
 
-<div class="sticky" id="sticky"><div class="bf-off"><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a><div class="bf-only"><b>Fundador por R$ 1.000 no Pix</b><small>Black November · até 30/11</small></div><a class="btn b-gold bf-only" href="#black"><span>Ver oferta</span><i>→</i></a></div>
+<div class="sticky" id="sticky"><div class="bf-off"><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a><div class="bf-only"><b>Fundador por R$ 999 no Pix</b><small>Black November · até 30/11</small></div><a class="btn b-gold bf-only" href="#black"><span>Ver oferta</span><i>→</i></a></div>
 
 <footer><div class="w">
  <div>© <span id="ano">2026</span> Haniel Dental CAD Works. Todos os direitos reservados. A Arte da Previsibilidade® é marca registrada.</div>
@@ -670,6 +669,8 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 
 <script>
 /* ===== Links de checkout da Hotmart (os mesmos do site) ===== */
+/* Ofertas Black November da Hotmart (preencher com os códigos novos). Vazio = WhatsApp, nunca o preço cheio. */
+var CHECKOUT_BF={ato1:"",ato2:"",combo:"",gestao:""};
 var CHECKOUT={
  ato1:"https://pay.hotmart.com/F100570235L?off=25sievg4",
  ato2:"https://pay.hotmart.com/I100598190O?off=jw4fck5c",
@@ -678,13 +679,15 @@ var CHECKOUT={
 };
 var WA="https://wa.me/5511939318325?text=";
 function wa(t){return WA+encodeURIComponent(t)}
+var NOME_BF={ato1:"o Primeiro Ato na Black November (R$ 597)",ato2:"o Segundo Ato na Black November (R$ 897)",combo:"o Combo na Black November (R$ 1.297)"};
 var NOME={ato1:"A Arte dos Inícios (R$ 797)",ato2:"A Arte das Estruturas e das Formas (R$ 1.197)",combo:"o combo com os dois atos (R$ 1.797)",oclusao:"a aula O Cadista e a Oclusão"};
-document.querySelectorAll("[data-checkout]").forEach(function(a){var k=a.dataset.checkout;a.href=CHECKOUT[k]||wa("Olá, Haniel! Quero comprar "+NOME[k]+".");a.target="_blank";a.rel="noopener"});
+var BFC=Date.now()<Date.parse("2026-12-01T00:00:00-03:00");NOME.gestao="o plano anual do Gestão de CAD na Black November (R$ 297)";
+document.querySelectorAll("[data-checkout]").forEach(function(a){var k=a.dataset.checkout,u=BFC&&(k in CHECKOUT_BF)?CHECKOUT_BF[k]:CHECKOUT[k];a.href=u||wa("Olá, Haniel! Quero comprar "+(BFC&&NOME_BF[k]||NOME[k])+".");a.target="_blank";a.rel="noopener"});
 document.querySelectorAll("[data-pix]").forEach(function(a){a.href=wa("Olá, Haniel! Quero comprar "+a.dataset.pix+" com desconto no Pix.");a.target="_blank";a.rel="noopener"});
 /* ===== Black November: liga até 30/11/2026 23h59 (Brasília) e some sozinha depois ===== */
 var BF_END=Date.parse("2026-12-01T00:00:00-03:00"),BF=Date.now()<BF_END;
 if(BF){document.body.classList.add("bf");document.querySelectorAll("[data-bf-href]").forEach(function(a){a.setAttribute("href",a.dataset.bfHref)})}
-var FUND_MSG=BF?"Olá, Haniel! Quero ser Membro Fundador na Black November (R$ 1.000 à vista no Pix).":"Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).";
+var FUND_MSG=BF?"Olá, Haniel! Quero ser Membro Fundador na Black November (R$ 999 à vista no Pix).":"Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).";
 var fb=document.getElementById("founderBtn");fb.href=wa(FUND_MSG);fb.target="_blank";fb.rel="noopener";
 var bb=document.getElementById("bfBtn");if(bb){bb.href=wa(FUND_MSG);bb.target="_blank";bb.rel="noopener"}
 if(BF){var p2=function(n){return String(n).padStart(2,"0")};
