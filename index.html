@@ -681,11 +681,12 @@ var WA="https://wa.me/5511939318325?text=";
 function wa(t){return WA+encodeURIComponent(t)}
 var NOME_BF={ato1:"o Primeiro Ato na Black November (R$ 597)",ato2:"o Segundo Ato na Black November (R$ 897)",combo:"o Combo na Black November (R$ 1.297)"};
 var NOME={ato1:"A Arte dos Inícios (R$ 797)",ato2:"A Arte das Estruturas e das Formas (R$ 1.197)",combo:"o combo com os dois atos (R$ 1.797)",oclusao:"a aula O Cadista e a Oclusão"};
-var BFC=Date.now()<Date.parse("2026-12-01T00:00:00-03:00");NOME.gestao="o plano anual do Gestão de CAD na Black November (R$ 297)";
+var BFC=Date.now()>=Date.parse("2026-11-03T00:00:00-03:00")&&Date.now()<Date.parse("2026-12-01T00:00:00-03:00");NOME.gestao="o plano anual do Gestão de CAD na Black November (R$ 297)";
 document.querySelectorAll("[data-checkout]").forEach(function(a){var k=a.dataset.checkout,u=BFC&&(k in CHECKOUT_BF)?CHECKOUT_BF[k]:CHECKOUT[k];a.href=u||wa("Olá, Haniel! Quero comprar "+(BFC&&NOME_BF[k]||NOME[k])+".");a.target="_blank";a.rel="noopener"});
 document.querySelectorAll("[data-pix]").forEach(function(a){a.href=wa("Olá, Haniel! Quero comprar "+a.dataset.pix+" com desconto no Pix.");a.target="_blank";a.rel="noopener"});
-/* ===== Black November: liga até 30/11/2026 23h59 (Brasília) e some sozinha depois ===== */
-var BF_END=Date.parse("2026-12-01T00:00:00-03:00"),BF=Date.now()<BF_END;
+/* ===== Black November: liga em 3/11/2026 0h e vai até 30/11/2026 23h59 (Brasília); some sozinha depois ===== */
+var BF_START=Date.parse("2026-11-03T00:00:00-03:00"),BF_END=Date.parse("2026-12-01T00:00:00-03:00"),BF=Date.now()>=BF_START&&Date.now()<BF_END;
+if(Date.now()<BF_START&&BF_START-Date.now()<864e5)setTimeout(function(){location.reload()},BF_START-Date.now()+1000);
 if(BF){document.body.classList.add("bf");document.querySelectorAll("[data-bf-href]").forEach(function(a){a.setAttribute("href",a.dataset.bfHref)})}
 var FUND_MSG=BF?"Olá, Haniel! Quero ser Membro Fundador na Black November (R$ 999 à vista no Pix).":"Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).";
 var fb=document.getElementById("founderBtn");fb.href=wa(FUND_MSG);fb.target="_blank";fb.rel="noopener";
