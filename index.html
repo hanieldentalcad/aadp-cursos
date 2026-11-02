@@ -566,7 +566,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <article class="plan glass hov rv"><p class="label">Segundo Ato</p><h3>A Arte das Estruturas e das Formas</h3><p class="s">Avançado</p><p class="price"><span class="bf-off">R$ 1.197</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span><a class="pix bf-off" data-pix="A Arte das Estruturas e das Formas" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 99,75 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p><a class="btn b-glass" data-checkout="ato2" href="#"><span>Comprar agora</span><i>→</i></a></article>
   <article class="plan glass hov best rv"><span class="tag">Mais completo</span><p class="label">Combo</p><h3>Os dois atos: Inícios &amp; Estruturas e Formas</h3><p class="s">O caminho completo, do início ao avançado.</p><p class="price"><span class="bf-off">R$ 1.797</span><span class="bf-only"><s>R$ 1.797</s>R$ 1.297</span><a class="pix bf-off" data-pix="o combo com os dois atos" href="#">Desconto no Pix</a></p><p class="inst"><span class="bf-off">à vista ou em até 12x de R$ 149,75 na Hotmart</span><span class="bf-only">à vista ou em até 12x no cartão, com juros, na Hotmart</span></p><p class="eco">Economia de R$ 197 em relação aos atos separados<span class="bf-only"> também na Black</span></p><a class="btn b-main" data-checkout="combo" href="#"><span>Comprar agora</span><i>→</i></a></article>
  </div>
- <p class="legal bf-only">Só o Gestão de CAD? Na Black November, o plano anual sai por <b style="color:var(--ivory);font-weight:400">R$ 297</b> (de R$ 360). <a data-checkout="gestao" href="#">Assinar o anual</a></p>
+ <p class="legal bf-only">Só o Gestão de CAD? Na Black November, o plano anual sai por <b style="color:var(--ivory);font-weight:400">R$ 297</b> no primeiro ano (de R$ 360; renova a R$ 360). <a data-checkout="gestao" href="#">Assinar o anual</a></p>
  <p class="legal">Compra pela Hotmart, com 7 dias para desistir da compra. <a href="https://hanieldentalcad.com/privacidade" target="_blank" rel="noopener">Termos de venda e licença</a>.</p>
 
  <article class="founder glass rv" id="fundador">
@@ -670,7 +670,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <script>
 /* ===== Links de checkout da Hotmart (os mesmos do site) ===== */
 /* Ofertas Black November da Hotmart (preencher com os códigos novos). Vazio = WhatsApp, nunca o preço cheio. */
-var CHECKOUT_BF={ato1:"",ato2:"",combo:"",gestao:""};
+var CHECKOUT_BF={ato1:"https://pay.hotmart.com/F100570235L?off=m46yaim9",ato2:"https://pay.hotmart.com/I100598190O?off=ujo9338d",combo:"https://pay.hotmart.com/L100734608H?off=yc5bv9cy",gestao:"https://pay.hotmart.com/T108204122L?off=qbz8eep9"};
 var CHECKOUT={
  ato1:"https://pay.hotmart.com/F100570235L?off=25sievg4",
  ato2:"https://pay.hotmart.com/I100598190O?off=jw4fck5c",
@@ -681,7 +681,7 @@ var WA="https://wa.me/5511939318325?text=";
 function wa(t){return WA+encodeURIComponent(t)}
 var NOME_BF={ato1:"o Primeiro Ato na Black November (R$ 597)",ato2:"o Segundo Ato na Black November (R$ 897)",combo:"o Combo na Black November (R$ 1.297)"};
 var NOME={ato1:"A Arte dos Inícios (R$ 797)",ato2:"A Arte das Estruturas e das Formas (R$ 1.197)",combo:"o combo com os dois atos (R$ 1.797)",oclusao:"a aula O Cadista e a Oclusão"};
-var BFC=Date.now()>=Date.parse("2026-11-03T00:00:00-03:00")&&Date.now()<Date.parse("2026-12-01T00:00:00-03:00");NOME.gestao="o plano anual do Gestão de CAD na Black November (R$ 297)";
+var BFC=Date.now()>=Date.parse("2026-11-03T00:00:00-03:00")&&Date.now()<Date.parse("2026-12-01T00:00:00-03:00");NOME.gestao="o plano anual do Gestão de CAD na Black November (R$ 297 no primeiro ano)";
 document.querySelectorAll("[data-checkout]").forEach(function(a){var k=a.dataset.checkout,u=BFC&&(k in CHECKOUT_BF)?CHECKOUT_BF[k]:CHECKOUT[k];a.href=u||wa("Olá, Haniel! Quero comprar "+(BFC&&NOME_BF[k]||NOME[k])+".");a.target="_blank";a.rel="noopener"});
 document.querySelectorAll("[data-pix]").forEach(function(a){a.href=wa("Olá, Haniel! Quero comprar "+a.dataset.pix+" com desconto no Pix.");a.target="_blank";a.rel="noopener"});
 /* ===== Black November: liga em 3/11/2026 0h e vai até 30/11/2026 23h59 (Brasília); some sozinha depois ===== */
