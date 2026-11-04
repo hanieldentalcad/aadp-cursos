@@ -296,6 +296,13 @@ body.bf .hero{padding-top:calc(var(--navh,177px) + 36px)}
 .bfc .de{font-family:var(--f-label);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .bfc .de s{color:var(--txt)}
 .bfc .por{font-family:var(--f-display);font-weight:700;font-size:clamp(3rem,6vw,4.6rem);line-height:1;margin:6px 0 2px;background:linear-gradient(180deg,#fff1c9,var(--gold-hi) 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bfc .card-t{font-size:.95rem;color:var(--txt);margin-top:8px}
+.card-l{display:inline-block;margin-top:14px;font-family:var(--f-label);font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);text-decoration:none;border-bottom:1px solid rgba(234,195,109,.45);padding-bottom:3px}
+.card-l:hover{color:#fff3d6}
+.bfbar .bfx{font-style:normal}
+@media (max-width:600px){.bfbar .bfx{display:none}.card-l{font-size:.66rem;letter-spacing:.12em}}
+.card-l{white-space:nowrap}
+.fbtns{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .bfc .pix-t{font-family:var(--f-label);font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi)}
 .cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:24px 0 22px}
 .cd div{text-align:center;padding:10px 4px;border:1px solid var(--line2);border-radius:6px;background:rgba(5,18,26,.35)}
@@ -455,7 +462,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <div class="spot" aria-hidden="true"></div>
 <div class="prog" id="prog" aria-hidden="true"></div>
 
-<nav id="nav"><a class="bfbar bf-only" href="#black"><span class="big">BLACK NOVEMBER</span><span><b>Membro Fundador por R$ 999 no Pix</b> · termina em</span><span class="cdb"><span><b data-cd="d">—</b><small>dias</small></span><span><b data-cd="h">—</b><small>horas</small></span><span><b data-cd="m">—</b><small>min</small></span><span><b data-cd="s">—</b><small>seg</small></span></span></a><div class="w">
+<nav id="nav"><a class="bfbar bf-only" href="#black"><span class="big">BLACK NOVEMBER</span><span><b>Membro Fundador por R$ 999</b><i class="bfx"> · Pix ou 12x</i> · termina em</span><span class="cdb"><span><b data-cd="d">—</b><small>dias</small></span><span><b data-cd="h">—</b><small>horas</small></span><span><b data-cd="m">—</b><small>min</small></span><span><b data-cd="s">—</b><small>seg</small></span></span></a><div class="w">
  <a class="brand" href="#topo" aria-label="Haniel Dental CAD Works"><b>HANIEL</b><span>DENTAL CAD WORKS</span></a>
  <div class="links"><a href="#ato1">Primeiro Ato</a><a href="#ato2">Segundo Ato</a><a href="#valores">Valores</a><a href="#fundador">Membro Fundador</a><a href="#duvidas">Dúvidas</a></div>
  <a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a>
@@ -486,7 +493,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <a class="tile glass hov" href="#ato1"><span class="n">I</span><span class="label">Primeiro Ato</span><b>A Arte dos Inícios</b><small>Iniciante · 5 módulos · 18 aulas</small><span class="p"><span class="bf-off">12x R$ 66,42</span><span class="bf-only"><s>R$ 797</s>R$ 597</span><em>→</em></span></a>
   <a class="tile glass hov" href="#ato2"><span class="n">II</span><span class="label">Segundo Ato</span><b>A Arte das Estruturas e das Formas</b><small>Avançado · 8 módulos · 36 aulas</small><span class="p"><span class="bf-off">12x R$ 99,75</span><span class="bf-only"><s>R$ 1.197</s>R$ 897</span><em>→</em></span></a>
   <a class="tile glass hov" href="#valores"><span class="n">III</span><span class="label">Combo</span><b>Os dois atos juntos</b><small>Do início ao avançado</small><span class="p"><span class="bf-off">12x R$ 149,75</span><span class="bf-only"><s>R$ 1.797</s>R$ 1.297</span><em>→</em></span></a>
-  <a class="tile glass hov f" href="#fundador" data-bf-href="#black"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 6 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p"><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 999 no Pix</span><em>→</em></span></a>
+  <a class="tile glass hov f" href="#fundador" data-bf-href="#black"><span class="n">IV</span><span class="label">Membro Fundador</span><b>Os dois cursos e 6 bibliotecas</b><small>Pacote promocional exclusivo</small><span class="p"><span class="bf-off">R$ 1.497 no Pix</span><span class="bf-only"><s>R$ 1.497</s>R$ 999</span><em>→</em></span></a>
  </div>
 </div></header>
 
@@ -510,9 +517,11 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
    <p class="de">De <s>R$ 1.497</s> por</p>
    <p class="por">R$ 999</p>
    <p class="pix-t">à vista no Pix</p>
+   <p class="card-t">ou em até 12x de R$ 103,32 no cartão</p>
    <div class="cd" role="timer" aria-label="Tempo até o fim da oferta"><div><b data-cd="d">—</b><span>dias</span></div><div><b data-cd="h">—</b><span>horas</span></div><div><b data-cd="m">—</b><span>min</span></div><div><b data-cd="s">—</b><span>seg</span></div></div>
    <a class="btn b-gold" id="bfBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a>
-   <p class="fine">Oferta válida até 30 de novembro de 2026, às 23h59 (horário de Brasília). Pagamento à vista no Pix, direto comigo pelo WhatsApp: eu mesmo libero o seu acesso aos cursos, às bibliotecas, ao grupo e ao Gestão de CAD.</p>
+   <a class="card-l" data-checkout="founder" href="#">Parcelar em até 12x no cartão →</a>
+   <p class="fine">Oferta válida até 30 de novembro de 2026, às 23h59 (horário de Brasília). No Pix, direto comigo pelo WhatsApp, eu mesmo libero tudo. No cartão, em até 12x pela Hotmart (os juros do parcelamento ficam por conta de quem compra), os cursos chegam automaticamente e eu libero as bibliotecas, o grupo, o suporte e o Gestão de CAD.</p>
   </div>
  </div>
 </div></section>
@@ -590,7 +599,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
     <li>Suporte exclusivo com o criador do curso</li>
     <li>12 meses de cortesia do Gestão de CAD, o sistema de gestão para cadistas</li>
    </ul>
-   <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.497</span><span class="bf-only"><s>R$ 1.497</s>R$ 999</span></p><p class="inst"><span class="bf-off">à vista no Pix</span><span class="bf-only">à vista no Pix · Black November até 30/11</span></p></div><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a></div>
+   <div class="buy glass"><div><p class="price"><span class="bf-off">R$ 1.497</span><span class="bf-only"><s>R$ 1.497</s>R$ 999</span></p><p class="inst"><span class="bf-off">à vista no Pix</span><span class="bf-only">à vista no Pix ou em até 12x de R$ 103,32 no cartão · até 30/11</span></p></div><div class="fbtns"><a class="btn b-gold" id="founderBtn" href="#"><span>Quero ser membro fundador</span><i>→</i></a><a class="card-l bf-only" data-checkout="founder" href="#">Parcelar em até 12x no cartão →</a></div></div>
   </div>
  </article>
 
@@ -625,7 +634,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
    <p class="label">Bibliotecas exocad<span class="bf-only"> · Black November</span></p>
    <h3>Coleção Haniel Works</h3>
    <p>As 5 bibliotecas de dentes HANIEL WORKS num só pacote: Sky Costanera, Anatomix Pro, Anatomix MVAE, Soberane e a nova Burj Khalifa. Você recebe tudo em um único link, logo após a confirmação do Pix.</p>
-   <div class="buy glass"><div><p class="price"><span class="bf-off">US$ 50</span><span class="bf-only"><s>US$ 50</s>R$ 200</span></p><p class="inst"><span class="bf-off">No Pix, pelo WhatsApp. Separadas, as 5 custam US$ 105.</span><span class="bf-only">Black November: no Pix, até 30/11. As bibliotecas avulsas seguem sem desconto.</span></p></div><a class="btn b-gold" id="packBtn" href="#"><span>Quero a coleção</span><i>→</i></a></div>
+   <div class="buy glass"><div><p class="price"><span class="bf-off">US$ 50</span><span class="bf-only"><s>US$ 50</s>R$ 200</span></p><p class="inst"><span class="bf-off">No Pix ou no cartão, pela cotação do dia. Separadas, as 5 custam US$ 105.</span><span class="bf-only">Black November: no Pix ou no cartão, até 30/11. As bibliotecas avulsas seguem sem desconto.</span></p></div><a class="btn b-gold" id="packBtn" href="https://hanieldentalcad.com/shopping" target="_blank" rel="noopener"><span>Comprar a coleção</span><i>→</i></a></div>
    <p class="pk-n">A AADP Founder Library não faz parte da coleção: é exclusiva dos membros fundadores. Licença de uso individual; o compartilhamento dos arquivos não é permitido.</p>
   </div>
  </article>
@@ -656,7 +665,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
   <details class="glass rv"><summary>Em que ordem devo fazer os cursos?</summary><p>O ideal é seguir a ordem dos atos: primeiro A Arte dos Inícios, depois A Arte das Estruturas e das Formas. Se você já tem experiência sólida no exocad, pode ir direto ao Segundo Ato.</p></details>
   <details class="glass rv"><summary>Como eu assisto às aulas?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso à área de membros da Hotmart e assiste no computador, no tablet ou no celular.</p></details>
   <details class="glass rv bf-only"><summary>Até quando vale o Membro Fundador por R$ 999?</summary><p>Até 30 de novembro de 2026, às 23h59 (horário de Brasília). A partir de 1º de dezembro, o Membro Fundador volta para R$ 1.497 no Pix.</p></details>
-  <details class="glass rv bf-only"><summary>Posso pagar o Membro Fundador no cartão?</summary><p>O Membro Fundador é exclusivo no Pix. Se preferir o cartão, o Combo e os atos avulsos estão na Hotmart com desconto de Black November, em até 12x (os juros do parcelamento ficam por conta de quem compra).</p></details>
+  <details class="glass rv bf-only"><summary>Posso pagar o Membro Fundador no cartão?</summary><p>Pode. Na Black November, o Membro Fundador sai por R$ 999 à vista no Pix ou em até 12x de R$ 103,32 no cartão, pela Hotmart (os juros do parcelamento ficam por conta de quem compra). No cartão, os cursos chegam automaticamente e eu libero as bibliotecas, o grupo VIP, o suporte e o Gestão de CAD.</p></details>
   <details class="glass rv"><summary>Por quanto tempo tenho acesso?</summary><p>Você tem 2 anos de acesso a todas as aulas do curso que comprar, a partir da data da compra.</p></details>
   <details class="glass rv"><summary>O curso tem certificado?</summary><p>Sim. Ao concluir o curso, você recebe o certificado de conclusão pela área de membros da Hotmart.</p></details>
   <details class="glass rv"><summary>Posso parcelar? Tem desconto no Pix?</summary><p>Na Hotmart você parcela em até 12x. Para pagar no Pix com desconto, toque em “Desconto no Pix” e fale direto pelo WhatsApp.</p></details>
@@ -678,7 +687,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  </div>
 </div></section>
 
-<div class="sticky" id="sticky"><div class="bf-off"><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a><div class="bf-only"><b>Fundador por R$ 999 no Pix</b><small>Black November · até 30/11</small></div><a class="btn b-gold bf-only" href="#black"><span>Ver oferta</span><i>→</i></a></div>
+<div class="sticky" id="sticky"><div class="bf-off"><b>A partir de 12x R$ 66,42</b><small>Garantia de 7 dias</small></div><a class="btn b-main bf-off" href="#valores"><span>Ver valores</span><i>→</i></a><div class="bf-only"><b>Fundador por R$ 999</b><small>Pix ou 12x · até 30/11</small></div><a class="btn b-gold bf-only" href="#black"><span>Ver oferta</span><i>→</i></a></div>
 
 <footer><div class="w">
  <div>© <span id="ano">2026</span> Haniel Dental CAD Works. Todos os direitos reservados. A Arte da Previsibilidade® é marca registrada.</div>
@@ -688,7 +697,7 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
 <script>
 /* ===== Links de checkout da Hotmart (os mesmos do site) ===== */
 /* Ofertas Black November da Hotmart (preencher com os códigos novos). Vazio = WhatsApp, nunca o preço cheio. */
-var CHECKOUT_BF={ato1:"https://pay.hotmart.com/F100570235L?off=m46yaim9",ato2:"https://pay.hotmart.com/I100598190O?off=ujo9338d",combo:"https://pay.hotmart.com/L100734608H?off=yc5bv9cy",gestao:"https://pay.hotmart.com/T108204122L?off=qbz8eep9"};
+var CHECKOUT_BF={ato1:"https://pay.hotmart.com/F100570235L?off=m46yaim9",ato2:"https://pay.hotmart.com/I100598190O?off=ujo9338d",combo:"https://pay.hotmart.com/L100734608H?off=yc5bv9cy",founder:"https://pay.hotmart.com/L100734608H?off=i2pn5xfx",gestao:"https://pay.hotmart.com/T108204122L?off=qbz8eep9"};
 var CHECKOUT={
  ato1:"https://pay.hotmart.com/F100570235L?off=25sievg4",
  ato2:"https://pay.hotmart.com/I100598190O?off=jw4fck5c",
@@ -708,7 +717,6 @@ if(Date.now()<BF_START&&BF_START-Date.now()<864e5)setTimeout(function(){location
 if(BF){document.body.classList.add("bf");document.querySelectorAll("[data-bf-href]").forEach(function(a){a.setAttribute("href",a.dataset.bfHref)})}
 var FUND_MSG=BF?"Olá, Haniel! Quero ser Membro Fundador na Black November (R$ 999 à vista no Pix).":"Olá, Haniel! Quero garantir minha vaga de membro fundador (R$ 1.497 à vista no Pix).";
 var fb=document.getElementById("founderBtn");fb.href=wa(FUND_MSG);fb.target="_blank";fb.rel="noopener";
-var pk=document.getElementById("packBtn");if(pk){pk.href=wa(BF?"Olá, Haniel! Quero a Coleção Haniel Works (as 5 bibliotecas) na Black November por R$ 200 no Pix.":"Olá, Haniel! Quero a Coleção Haniel Works (as 5 bibliotecas) por US$ 50 no Pix.");pk.target="_blank";pk.rel="noopener"}
 var bb=document.getElementById("bfBtn");if(bb){bb.href=wa(FUND_MSG);bb.target="_blank";bb.rel="noopener"}
 if(BF){var p2=function(n){return String(n).padStart(2,"0")};
  (function tick(){var t=Math.max(0,BF_END-1000-Date.now()),d=Math.floor(t/864e5),h=Math.floor(t/36e5)%24,m=Math.floor(t/6e4)%60,sec=Math.floor(t/1e3)%60;
