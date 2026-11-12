@@ -456,6 +456,19 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  .deps .row{justify-content:center;margin-inline:auto;max-width:1380px;padding-inline:var(--gut)}
 }
 </style>
+<!-- Meta Pixel (HDC Works - Pixel) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3887941034680776');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Cursos A Arte da Previsibilidade',content_category:'Cursos AADP',currency:'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3887941034680776&ev=PageView&noscript=1" alt=""></noscript>
+<!-- Fim Meta Pixel -->
 </head>
 <body>
 
@@ -726,6 +739,21 @@ if(BF){var p2=function(n){return String(n).padStart(2,"0")};
   if(t<=0){location.reload();return}setTimeout(tick,1000)})();}
 var wf=document.getElementById("waFaq");wf.href=wa("Olá, Haniel! Tenho uma dúvida sobre os cursos A Arte da Previsibilidade.");wf.target="_blank";wf.rel="noopener";
 document.getElementById("ano").textContent=new Date().getFullYear();
+/* ===== Meta Pixel: eventos de clique ===== */
+(function(){
+ var bfOn=Date.now()>=Date.parse("2026-11-03T00:00:00-03:00")&&Date.now()<Date.parse("2026-12-01T00:00:00-03:00");
+ var V=bfOn?{ato1:597,ato2:897,combo:1297,founder:999,gestao:297,oclusao:50}:{ato1:797,ato2:1197,combo:1797,founder:1497,gestao:297,oclusao:50};
+ var N={ato1:"Primeiro Ato - A Arte dos Inicios",ato2:"Segundo Ato - A Arte das Estruturas e das Formas",combo:"Combo dos dois atos",founder:"Membro Fundador",gestao:"Gestao de CAD",oclusao:"O Cadista e a Oclusao"};
+ document.addEventListener("click",function(e){
+  if(typeof fbq!=="function")return;
+  var a=e.target.closest&&e.target.closest("a");if(!a)return;
+  var k=a.dataset.checkout;
+  if(k&&/hotmart\.com/.test(a.href)){fbq("track","InitiateCheckout",{content_name:N[k]||k,content_ids:[k],value:V[k]||0,currency:"BRL"});return}
+  if(/wa\.me\//.test(a.href)){var f=(a.id==="founderBtn"||a.id==="bfBtn");fbq("track","Contact",{content_name:f?"Membro Fundador (Pix)":(a.dataset.pix?a.dataset.pix+" (Pix)":(k?N[k]||k:"WhatsApp")),value:f?V.founder:0,currency:"BRL"});if(f)fbq("track","Lead",{content_name:"Membro Fundador (Pix)",value:V.founder,currency:"BRL"});return}
+  if(/hanieldentalcad\.com\/shopping/.test(a.href)){fbq("track","InitiateCheckout",{content_name:"Colecao Haniel Works",content_ids:["colecao"],currency:"BRL"})}
+ },true);
+})();
+
 
 
 /* ===== depoimentos (nome e @ do Instagram: preencher quando houver) ===== */
