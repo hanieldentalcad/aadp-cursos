@@ -456,19 +456,6 @@ dialog.print button{background:none;border:1px solid var(--line2);color:var(--iv
  .deps .row{justify-content:center;margin-inline:auto;max-width:1380px;padding-inline:var(--gut)}
 }
 </style>
-<!-- Meta Pixel (HDC Works - Pixel) -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','3887941034680776');
-fbq('track','PageView');
-fbq('track','ViewContent',{content_name:'Cursos A Arte da Previsibilidade',content_category:'Cursos AADP',currency:'BRL'});
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3887941034680776&ev=PageView&noscript=1" alt=""></noscript>
-<!-- Fim Meta Pixel -->
 </head>
 <body>
 
@@ -739,20 +726,6 @@ if(BF){var p2=function(n){return String(n).padStart(2,"0")};
   if(t<=0){location.reload();return}setTimeout(tick,1000)})();}
 var wf=document.getElementById("waFaq");wf.href=wa("Olá, Haniel! Tenho uma dúvida sobre os cursos A Arte da Previsibilidade.");wf.target="_blank";wf.rel="noopener";
 document.getElementById("ano").textContent=new Date().getFullYear();
-/* ===== Meta Pixel: eventos de clique ===== */
-(function(){
- var bfOn=Date.now()>=Date.parse("2026-11-03T00:00:00-03:00")&&Date.now()<Date.parse("2026-12-01T00:00:00-03:00");
- var V=bfOn?{ato1:597,ato2:897,combo:1297,founder:999,gestao:297,oclusao:50}:{ato1:797,ato2:1197,combo:1797,founder:1497,gestao:297,oclusao:50};
- var N={ato1:"Primeiro Ato - A Arte dos Inicios",ato2:"Segundo Ato - A Arte das Estruturas e das Formas",combo:"Combo dos dois atos",founder:"Membro Fundador",gestao:"Gestao de CAD",oclusao:"O Cadista e a Oclusao"};
- document.addEventListener("click",function(e){
-  if(typeof fbq!=="function")return;
-  var a=e.target.closest&&e.target.closest("a");if(!a)return;
-  var k=a.dataset.checkout;
-  if(k&&/hotmart\.com/.test(a.href)){fbq("track","InitiateCheckout",{content_name:N[k]||k,content_ids:[k],value:V[k]||0,currency:"BRL"});return}
-  if(/wa\.me\//.test(a.href)){var f=(a.id==="founderBtn"||a.id==="bfBtn");fbq("track","Contact",{content_name:f?"Membro Fundador (Pix)":(a.dataset.pix?a.dataset.pix+" (Pix)":(k?N[k]||k:"WhatsApp")),value:f?V.founder:0,currency:"BRL"});if(f)fbq("track","Lead",{content_name:"Membro Fundador (Pix)",value:V.founder,currency:"BRL"});return}
-  if(/hanieldentalcad\.com\/shopping/.test(a.href)){fbq("track","InitiateCheckout",{content_name:"Colecao Haniel Works",content_ids:["colecao"],currency:"BRL"})}
- },true);
-})();
 
 
 
@@ -857,5 +830,34 @@ if("IntersectionObserver" in window&&!reduce){
 }
 </script>
 <script>(function(){var n=document.getElementById("nav");if(!n)return;function f(){document.documentElement.style.setProperty("--navh",n.offsetHeight+"px")}f();addEventListener("resize",f);addEventListener("load",f);if(document.fonts)document.fonts.ready.then(f)})();</script>
+<!-- Meta Pixel (HDC Works - Pixel) com consentimento: só carrega depois de "Aceitar" -->
+<script>
+(function(){
+ var st=document.createElement("style");st.textContent="#hdcCk{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:2147483000;width:min(560px,calc(100% - 28px));background:rgba(11,12,15,.97);border:1px solid rgba(178,161,126,.38);border-radius:14px;padding:16px 18px;color:#ECE4CE;font:400 14px/1.5 \"Jost\",system-ui,sans-serif;box-shadow:0 18px 50px rgba(0,0,0,.55);display:flex;gap:14px;align-items:center;flex-wrap:wrap}#hdcCk p{margin:0;flex:1 1 260px}#hdcCk a{color:#B2A17E;text-decoration:underline;text-underline-offset:2px}#hdcCk .ck-b{display:flex;gap:8px;margin-left:auto}#hdcCk button{cursor:pointer;border-radius:999px;padding:8px 16px;font:500 12px/1 \"Jost\",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;border:1px solid #B2A17E}#hdcCk .ck-y{background:#B2A17E;color:#0B0C0F}#hdcCk .ck-n{background:transparent;color:#ECE4CE;border-color:rgba(236,228,206,.35)}#hdcCk button:hover{filter:brightness(1.08)}";(document.head||document.documentElement).appendChild(st);
+ var ID="3887941034680776",K="hdc-consent",POL="https://hanieldentalcad.com/privacidade";
+ function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+ function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+ function lang(){var l="";try{l=localStorage.getItem("hdc-site-lang")||""}catch(e){}l=l||(document.documentElement.lang||"pt");return /^en/i.test(l)?"en":/^es/i.test(l)?"es":"pt"}
+ var TX={pt:["Usamos cookies de marketing (Pixel da Meta) para medir os anúncios e mostrar ofertas mais relevantes. Você escolhe.","Política de cookies","Aceitar","Recusar"],
+  en:["We use marketing cookies (Meta Pixel) to measure our ads and show more relevant offers. It's your choice.","Cookie policy","Accept","Decline"],
+  es:["Usamos cookies de marketing (Píxel de Meta) para medir los anuncios y mostrar ofertas más relevantes. Tú eliges.","Política de cookies","Aceptar","Rechazar"]};
+ function load(){if(window.fbq)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init',ID);fbq('track','PageView');fbq("track","ViewContent",{content_name:"Cursos A Arte da Previsibilidade",currency:"BRL"});}
+ function banner(){var t=TX[lang()],d=document.createElement("div");d.id="hdcCk";d.setAttribute("role","dialog");d.setAttribute("aria-label",t[1]);
+  d.innerHTML='<p>'+t[0]+' <a href="'+POL+'" target="_blank" rel="noopener">'+t[1]+'</a>.</p><div class="ck-b"><button type="button" class="ck-n">'+t[3]+'</button><button type="button" class="ck-y">'+t[2]+'</button></div>';
+  d.querySelector(".ck-y").onclick=function(){set("yes");d.remove();load()};
+  d.querySelector(".ck-n").onclick=function(){set("no");d.remove()};
+  document.body.appendChild(d)}
+ window.hdcCookieChoice=function(){set("");var o=document.getElementById("hdcCk");if(o)o.remove();banner()};
+ var c=get();if(c==="yes")load();else if(c!=="no"){if(document.body)banner();else document.addEventListener("DOMContentLoaded",banner)}
+ document.addEventListener("click",function(e){if(typeof fbq!=="function")return;var a=e.target.closest&&e.target.closest("a,button");if(!a)return;var h=a.href||"";
+  var k=a.dataset&&a.dataset.checkout,bfOn=Date.now()<Date.parse("2026-12-01T00:00:00-03:00"),V=bfOn?{ato1:597,ato2:897,combo:1297,founder:999,gestao:297,oclusao:50}:{ato1:797,ato2:1197,combo:1797,founder:1497,gestao:297,oclusao:50};
+  if(k&&/hotmart\.com/.test(h)){fbq("track","InitiateCheckout",{content_name:k,content_ids:[k],value:V[k]||0,currency:"BRL"});return}
+  if(/wa\.me\//.test(h)){var f=(a.id==="founderBtn"||a.id==="bfBtn");fbq("track","Contact",{content_name:f?"Membro Fundador (Pix)":(a.dataset.pix?a.dataset.pix+" (Pix)":"WhatsApp"),value:f?V.founder:0,currency:"BRL"});if(f)fbq("track","Lead",{content_name:"Membro Fundador (Pix)",value:V.founder,currency:"BRL"});return}
+  if(/hotmart\.com/.test(h)){fbq("track","InitiateCheckout",{content_name:(a.textContent||"").trim().slice(0,80),currency:"BRL"});return}
+ },true);
+})();
+</script>
+<!-- Fim Meta Pixel -->
 </body>
 </html>
